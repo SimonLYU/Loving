@@ -30,7 +30,7 @@
 
 - (void)postHttpRequestForPath:(NSString *)path
                          paras:(NSMutableDictionary *)paras
-                    completion:(void(^)(NSData *result, NSURLResponse *response, NSError *err))completion{
+                    completion:(void(^)(NSData *result, NSURLResponse *response, NSError *error))completion{
     /*************** 处理参数 ***************/
     //拼接common参数
     if (!paras) {
@@ -68,7 +68,7 @@
 
 - (void)getHttpRequestForPath:(NSString *)path
                         paras:(NSMutableDictionary *)paras
-                   completion:(void(^)(NSData *result, NSURLResponse *response, NSError *err))completion{
+                   completion:(void(^)(NSData *result, NSURLResponse *response, NSError *error))completion{
     /*************** 处理参数 ***************/
     //拼接common参数
     if (!paras) {

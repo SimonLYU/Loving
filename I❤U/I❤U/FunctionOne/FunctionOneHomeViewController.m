@@ -7,38 +7,44 @@
 //
 
 #import "FunctionOneHomeViewController.h"
+#import "BaseHeaders.h"
 
-@interface FunctionOneHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface FunctionOneHomeViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *detailLabel;
 @end
 
 @implementation FunctionOneHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
 //    [self setupData];
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self setupData];
+}
 - (void)setupData{
-//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-//    self.tableView.delegate = self;
-//    self.tableView.dataSource = self;
+    [[HttpUtil sharedInstance] getHttpRequestForPath:@"http://192.168.30.24:8080/hello" paras:nil completion:^(NSData *result, NSURLResponse *response, NSError *error) {
+        if (error) {
+            [Log info:NSStringFromClass(self.class) message:@"error = %@",error];
+            return;
+        }
+        if (result) {
+            NSDictionary * jsonDic = [NSJSONSerialization JSONObjectWithData:result options:0 error:nil];
+            if ([jsonDic objectForKey:@"message"]) {
+                self.detailLabel.text = [jsonDic objectForKey:@"message"];
+            }
+            [Log info:NSStringFromClass(self.class) message:@"result json dict = %@",jsonDic];
+        }else{
+            [Log info:NSStringFromClass(self.class) message:@"result is nil!"];
+        }
+    }];
 }
 
-#pragma mark - UITableViewDataSource
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    return 1;
-//}
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return 10;
-//}
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-//    cell.textLabel.text = @"ceshi...";
-//    return cell;
-//}
-#pragma mark - UITableViewDelegate
+- (void)setupUI{
+    self.detailLabel.text = @"暂时还没有想要说的话哦~";
+}
 @end

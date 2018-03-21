@@ -13,6 +13,7 @@
 #import "BaseNavigationController.h"
 #import "BaseTabBarController.h"
 #import "Log.h"
+#import "HttpUtil.h"
 
 static NSString * const kCoverScaleChangeName    = @"coverScaleChange";
 static NSString * const kCoverDoubleTapped       = @"coverDoubleTapped";
