@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		9D7AC3E0206235F800592C74 /* HttpUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpUtil.h; sourceTree = "<group>"; };
 		9D7AC3E1206235F800592C74 /* HttpUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpUtil.m; sourceTree = "<group>"; };
+		9D7AC3E3206276B900592C74 /* ヾ(･ε･｀*).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ヾ(･ε･｀*).entitlements"; sourceTree = "<group>"; };
 		F4546498205147B800832537 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		F4546499205147B800832537 /* Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Log.m; sourceTree = "<group>"; };
 		F4B7CD23204FF7F500676D18 /* ヾ(･ε･｀*).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ヾ(･ε･｀*).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +82,7 @@
 		F4B7CD1A204FF7F500676D18 = {
 			isa = PBXGroup;
 			children = (
+				9D7AC3E3206276B900592C74 /* ヾ(･ε･｀*).entitlements */,
 				F4B7CD25204FF7F500676D18 /* I❤U */,
 				F4B7CD24204FF7F500676D18 /* Products */,
 			);
@@ -239,6 +241,11 @@
 					F4B7CD22204FF7F500676D18 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -428,8 +435,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H72ELBS265;
+				DEVELOPMENT_TEAM = KS98J4RYQ2;
 				INFOPLIST_FILE = "I❤U/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,8 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H72ELBS265;
+				DEVELOPMENT_TEAM = KS98J4RYQ2;
 				INFOPLIST_FILE = "I❤U/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
