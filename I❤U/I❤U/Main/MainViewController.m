@@ -50,6 +50,8 @@ static CGFloat const coverAnimDuration = 0.25;
 @implementation MainViewController
 
 - (void)viewDidLoad {
+    //编译bug 测试...
+    lsjf
     [super viewDidLoad];
     [self _setupData];
     [self _setupMainTabController];
