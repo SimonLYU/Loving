@@ -7,8 +7,13 @@
 //
 
 #import "FunctionTwoHomeViewController.h"
+#import "Masonry.h"
+#import "LOTAnimationView+Extension.h"
+#import "BaseHeaders.h"
 
 @interface FunctionTwoHomeViewController ()
+
+@property (nonatomic, strong) LOTAnimationView *animationView;
 
 @end
 
@@ -16,22 +21,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI{
+    NSString * animationName = @"background_full";
+    NSString * rootDir = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"LOTLocalResource/RealTimeVoiceGame/Effect"];
+    self.animationView = [LOTAnimationView animationNamed:animationName rootDir:rootDir subDir:animationName];
+//    self.animationView.frame = self.view.bounds;
+    [self.view addSubview:self.animationView];
+    [self.animationView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top);
+        make.left.mas_equalTo(self.view.mas_left);
+        make.right.mas_equalTo(self.view.mas_right);
+        make.bottom.mas_equalTo(self.view.mas_bottom);
+    }];
+    self.animationView.loopAnimation = NO;
+    [self.animationView playWithCompletion:^(BOOL animationFinished) {
+        [Log info:NSStringFromClass(self.class) message:@"动画播放完毕:%@",animationName];
+    }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

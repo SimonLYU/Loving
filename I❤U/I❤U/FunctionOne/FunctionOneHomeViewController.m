@@ -27,19 +27,20 @@
     [self setupData];
 }
 - (void)setupData{
-    [[HttpUtil sharedInstance] getHttpRequestForPath:@"http://192.168.30.24:8080/hello" paras:nil completion:^(NSData *result, NSURLResponse *response, NSError *error) {
+    __weak typeof(self) wSelf = self;
+    [[HttpUtil sharedInstance] getHttpRequestForPath:@"http://192.168.80.201:8080/user/22" paras:nil completion:^(NSData *result, NSURLResponse *response, NSError *error) {
         if (error) {
-            [Log info:NSStringFromClass(self.class) message:@"error = %@",error];
+            [Log info:NSStringFromClass(wSelf.class) message:@"error = %@",error];
             return;
         }
         if (result) {
             NSDictionary * jsonDic = [NSJSONSerialization JSONObjectWithData:result options:0 error:nil];
             if ([jsonDic objectForKey:@"message"]) {
-                self.detailLabel.text = [jsonDic objectForKey:@"message"];
+                wSelf.detailLabel.text = [jsonDic objectForKey:@"message"];
             }
-            [Log info:NSStringFromClass(self.class) message:@"result json dict = %@",jsonDic];
+            [Log info:NSStringFromClass(wSelf.class) message:@"result json dict = %@",jsonDic];
         }else{
-            [Log info:NSStringFromClass(self.class) message:@"result is nil!"];
+            [Log info:NSStringFromClass(wSelf.class) message:@"result is nil!"];
         }
     }];
 }

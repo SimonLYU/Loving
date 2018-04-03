@@ -53,8 +53,7 @@
     
     //LocalNotification :  每天中午12点发一条通知
     UILocalNotification *local  = [[UILocalNotification alloc] init];
-    local.fireDate = [NSDate dateWithTimeIntervalSinceNow:20];
-//    local.fireDate = [NSDate dateWithTimeIntervalSince1970:4*60*60];//ps:since1970是从北京时间1970年1月1日早上8点开始算
+    local.fireDate = [NSDate dateWithTimeIntervalSince1970:4*60*60];//ps:since1970是从北京时间1970年1月1日早上8点开始算
     local.soundName = UILocalNotificationDefaultSoundName;
     local.alertBody = @"老婆大人,中午十二点到了,你家亲爱的又想你了哦~";
     local.repeatInterval = kCFCalendarUnitDay;//循环通知的周期:每天

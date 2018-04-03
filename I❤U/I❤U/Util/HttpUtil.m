@@ -54,14 +54,15 @@
     request.HTTPBody = requestBodyData;
     /*************** 处理dataTask任务 ***************/
     NSURLSessionDataTask * dataTask = [[HttpUtil sharedInstance].sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        //Log
-        NSString* stringRet = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        [Log info:NSStringFromClass(self.class) message:@"postHttpRequestForPath stringRet=%@",stringRet];
-        //回调
-        if (completion) {
-            completion(data,response,error);
-        }
-        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            //Log
+            NSString* stringRet = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            [Log info:NSStringFromClass(self.class) message:@"postHttpRequestForPath stringRet=%@",stringRet];
+            //回调
+            if (completion) {
+                completion(data,response,error);
+            }
+        }];
     }];
     [dataTask resume];
 }
@@ -91,13 +92,15 @@
     request.HTTPMethod = @"GET";
     /*************** 处理dataTask任务 ***************/
     NSURLSessionDataTask * dataTask = [[HttpUtil sharedInstance].sharedSession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        //Log
-        NSString* stringRet = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        [Log info:NSStringFromClass(self.class) message:@"postHttpRequestForPath stringRet=%@",stringRet];
-        //回调
-        if (completion) {
-            completion(data,response,error);
-        }
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            //Log
+            NSString* stringRet = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            [Log info:NSStringFromClass(self.class) message:@"postHttpRequestForPath stringRet=%@",stringRet];
+            //回调
+            if (completion) {
+                completion(data,response,error);
+            }
+        }];
     }];
     [dataTask resume];
 }
