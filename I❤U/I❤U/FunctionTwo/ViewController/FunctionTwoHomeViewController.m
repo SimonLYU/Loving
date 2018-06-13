@@ -289,8 +289,9 @@
         [self.animationView play];
         return;
     }
-    NSString * animationName = @"voice_live_bgloading";
-    NSString * rootDir = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"LOTLocalResource"];
+
+    NSString * animationName = @"background_full";
+    NSString * rootDir = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"LOTLocalResource/RealTimeVoiceGame/Effect"];
     self.animationView = [LOTAnimationView animationNamed:animationName rootDir:rootDir subDir:animationName];
     [self.view insertSubview:self.animationView atIndex:0];
     CGFloat expectWidth = [UIScreen mainScreen].bounds.size.height*self.animationView.frame.size.width / self.animationView.frame.size.height;
