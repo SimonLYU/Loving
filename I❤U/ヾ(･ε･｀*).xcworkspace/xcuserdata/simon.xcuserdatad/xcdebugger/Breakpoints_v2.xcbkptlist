@@ -25,13 +25,13 @@
                   symbolName = "__42-[FunctionTwoViewModel sendMessageCommand]_block_invoke_2"
                   moduleName = "&#x30fd;&#x3099;(&#xff65;&#x3b5;&#xff65;&#xff40;*)"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simon/Documents/MyProject/Loving-master/I%E2%9D%A4U/I%E2%9D%A4U/FunctionTwo/ViewModel/FunctionTwoViewModel.m"
-                  timestampString = "550489289.844045"
+                  urlString = "file:///Users/simon/Loving/I%E2%9D%A4U/I%E2%9D%A4U/FunctionTwo/ViewModel/FunctionTwoViewModel.m"
+                  timestampString = "550569580.780332"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
                   endingLineNumber = "36"
-                  offsetFromSymbolStart = "743">
+                  offsetFromSymbolStart = "724">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -40,13 +40,13 @@
                   symbolName = "__42-[FunctionTwoViewModel sendMessageCommand]_block_invoke_3"
                   moduleName = "&#x30fd;&#x3099;(&#xff65;&#x3b5;&#xff65;&#xff40;*)"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simon/Documents/MyProject/Loving-master/I%E2%9D%A4U/I%E2%9D%A4U/FunctionTwo/ViewModel/FunctionTwoViewModel.m"
-                  timestampString = "550489289.846179"
+                  urlString = "file:///Users/simon/Loving/I%E2%9D%A4U/I%E2%9D%A4U/FunctionTwo/ViewModel/FunctionTwoViewModel.m"
+                  timestampString = "550569580.7822599"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
                   endingLineNumber = "36"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "32">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -55,13 +55,13 @@
                   symbolName = "__destroy_helper_block_"
                   moduleName = "&#x30fd;&#x3099;(&#xff65;&#x3b5;&#xff65;&#xff40;*)"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/simon/Documents/MyProject/Loving-master/I%E2%9D%A4U/I%E2%9D%A4U/FunctionTwo/ViewModel/FunctionTwoViewModel.m"
-                  timestampString = "550489289.84872"
+                  urlString = "file:///Users/simon/Loving/I%E2%9D%A4U/I%E2%9D%A4U/FunctionTwo/ViewModel/FunctionTwoViewModel.m"
+                  timestampString = "550569580.784048"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "36"
                   endingLineNumber = "36"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -79,6 +79,22 @@
             startingLineNumber = "45"
             endingLineNumber = "45"
             landmarkName = "-receiveNewMessageCommand"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&#x2764;U/FunctionThree/Model/LOVEGameAudioManager.m"
+            timestampString = "550569580.676787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-playUIAudio:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

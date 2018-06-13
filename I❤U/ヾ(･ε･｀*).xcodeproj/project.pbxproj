@@ -231,6 +231,7 @@
 		F45BD9C0207365E200100E37 /* LOTAnimationView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD9BF207365E200100E37 /* LOTAnimationView+Extension.m */; };
 		F45BDDA92073741500100E37 /* LOTLocalResource in Resources */ = {isa = PBXBuildFile; fileRef = F45BDDA82073741500100E37 /* LOTLocalResource */; };
 		F46CEF3420CF7178006CB1BA /* IMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46CEF3320CF7178006CB1BA /* IMManager.m */; };
+		F4B4BC3420D1005900B86E35 /* LOVEGameAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B4BC3320D1005900B86E35 /* LOVEGameAudioManager.m */; };
 		F4B6CDD220CE159C002D6A87 /* LOVEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDD120CE159C002D6A87 /* LOVEModel.m */; };
 		F4B6CDD820CE1D0E002D6A87 /* FunctionThreeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDD720CE1D0E002D6A87 /* FunctionThreeViewModel.m */; };
 		F4B6CDDC20CE45EF002D6A87 /* LOVEPlaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDDB20CE45EF002D6A87 /* LOVEPlaneView.m */; };
@@ -729,6 +730,8 @@
 		F45BDDA82073741500100E37 /* LOTLocalResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LOTLocalResource; sourceTree = "<group>"; };
 		F46CEF3220CF7178006CB1BA /* IMManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMManager.h; sourceTree = "<group>"; };
 		F46CEF3320CF7178006CB1BA /* IMManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMManager.m; sourceTree = "<group>"; };
+		F4B4BC3220D1005900B86E35 /* LOVEGameAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOVEGameAudioManager.h; sourceTree = "<group>"; };
+		F4B4BC3320D1005900B86E35 /* LOVEGameAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOVEGameAudioManager.m; sourceTree = "<group>"; };
 		F4B6CDD020CE159C002D6A87 /* LOVEModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOVEModel.h; sourceTree = "<group>"; };
 		F4B6CDD120CE159C002D6A87 /* LOVEModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOVEModel.m; sourceTree = "<group>"; };
 		F4B6CDD620CE1D0E002D6A87 /* FunctionThreeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionThreeViewModel.h; sourceTree = "<group>"; };
@@ -826,6 +829,8 @@
 		F440CE2820C90993002EFB87 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4B4BC3220D1005900B86E35 /* LOVEGameAudioManager.h */,
+				F4B4BC3320D1005900B86E35 /* LOVEGameAudioManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2213,6 +2218,7 @@
 				F440D2C520C94086002EFB87 /* EaseLocationViewController.m in Sources */,
 				F45BD9A4207361F900100E37 /* LOTShapeStroke.m in Sources */,
 				F45BD9A9207361F900100E37 /* UIBezierPath.m in Sources */,
+				F4B4BC3420D1005900B86E35 /* LOVEGameAudioManager.m in Sources */,
 				F440D2B920C94086002EFB87 /* NSString+Valid.m in Sources */,
 				F440D2A920C94086002EFB87 /* SDWebImageManager.m in Sources */,
 				F4D701BE20CA201500172456 /* LOVEMessageCell.m in Sources */,

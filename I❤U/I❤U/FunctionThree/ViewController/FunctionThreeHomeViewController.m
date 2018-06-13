@@ -20,6 +20,7 @@
 #import "IMManager.h"
 #import "LOVEMessageCell.h"
 #import "LOVEMessage.h"
+#import "LOVEGameAudioManager.h"
 
 @interface FunctionThreeHomeViewController ()<LOVEPixelViewDelegate , UITableViewDelegate , UITableViewDataSource>
 
@@ -60,6 +61,7 @@
 
 #pragma mark - LOVEPixelViewDelegate
 - (void)pixelView:(LOVEPixelView *)pixelView didSelectPosition:(CGPoint)position{
+    [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypeClickEnableButton];
     for (NSArray * hangs in self.battlefieldPixels) {
         for (LOVEPixelView * pixel in hangs) {
             pixel.selected = NO;
@@ -264,11 +266,6 @@
 
 #pragma mark - tableviewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    LOVEMessage *loveMessage = IMManager.shareManager.gameMessageList[indexPath.row];
-//    if (loveMessage.messageCellHeight <= 0) {
-//        loveMessage.messageCellHeight = [IMManager.class calculateCellHeight:loveMessage.emMessage];
-//    }
-//    return loveMessage.messageCellHeight;
     return 28;
 }
 

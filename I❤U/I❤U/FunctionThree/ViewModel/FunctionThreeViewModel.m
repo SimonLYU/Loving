@@ -14,6 +14,7 @@
 #import "LOVEModel.h"
 #import "IMManager.h"
 #import "LOVEMessage.h"
+#import "LOVEGameAudioManager.h"
 
 #define CGPointError CGPointMake(100, 100)
 
@@ -36,6 +37,7 @@
             [self resetGame];
             self.gameState = kGameStateStarting;
             [UIUtil showHint:@"Your Turn!"];
+            [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypeTimeUp];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [[IMManager shareManager] genLocalGameMessage:@"游戏开始,你先攻击"];
             });
@@ -92,8 +94,21 @@
             NSMutableArray * destoryPoints = [NSMutableArray arrayWithArray:self.targetDestroyPoints];
             [destoryPoints addObject:text];
             self.targetDestroyPoints = destoryPoints;
+            //音效
+            NSInteger targetHang = [[text componentsSeparatedByString:@","].firstObject integerValue];
+            NSInteger targetLie = [[text componentsSeparatedByString:@","].lastObject integerValue];
+            NSString * mapString = self.myPlanesMap[targetHang][targetLie];
+            if ([mapString isEqualToString:kPlaneBody]) {
+                [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypePopQuestion];
+            }else if ([mapString isEqualToString:kPlaneHead]){
+                [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypeAnswerRight];
+            }else if ([mapString isEqualToString:kPlaneBlank]){
+                [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypeAnswerWrong];
+            }
+            
         }else{//对方攻击了某一点
             [UIUtil showHint:@"Your Turn!"];
+            [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypeTimeUp];
             NSMutableArray * destoryPoints = [NSMutableArray arrayWithArray:self.myDestroyPoints];
             [destoryPoints addObject:text];
             self.myDestroyPoints = destoryPoints;
