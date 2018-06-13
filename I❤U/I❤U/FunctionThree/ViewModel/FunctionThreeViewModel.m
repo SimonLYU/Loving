@@ -97,7 +97,7 @@
             //音效
             NSInteger targetHang = [[text componentsSeparatedByString:@","].firstObject integerValue];
             NSInteger targetLie = [[text componentsSeparatedByString:@","].lastObject integerValue];
-            NSString * mapString = self.myPlanesMap[targetHang][targetLie];
+            NSString * mapString = self.targetPlanesMap[targetHang][targetLie];
             if ([mapString isEqualToString:kPlaneBody]) {
                 [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypePopQuestion];
             }else if ([mapString isEqualToString:kPlaneHead]){
@@ -163,8 +163,15 @@
                 [UIUtil showHint:@"请等待对方攻击"];
                 return [RACSignal empty];
             }
+            
             if (!CGPointEqualToPoint(self.targetPoint, CGPointError)) {
                 NSString * sendString = [NSString stringWithFormat:@"%@%@",kFireScheme,[NSString stringWithFormat:@"%.0lf,%.0lf",self.targetPoint.x , self.targetPoint.y]];
+                for (NSString * historyPointString in self.targetDestroyPoints) {
+                    if ([sendString containsString:historyPointString]) {
+                        [UIUtil showHint:@"这个位置已经攻击过了!"];
+                        return [RACSignal empty];
+                    }
+                }
                 EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithText:sendString];
                 NSString *from = [[EMClient sharedClient] currentUsername];
                 [Log info:NSStringFromClass(self.class) message:@"current user name = %@",from];
