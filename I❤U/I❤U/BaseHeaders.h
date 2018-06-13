@@ -57,10 +57,10 @@ static NSString * const kPlaneHead  = @"2";
 static NSInteger airportLength = 10;
 static NSInteger airportHeight = 12;
 
-static NSString * wifeAccount    = @"yyr";
-static NSString * husbandAccount = @"lxm";
+//static NSString * wifeAccount    = @"yyr";
+//static NSString * husbandAccount = @"lxm";
 
-//static NSString * wifeAccount    = @"playerone";
-//static NSString * husbandAccount = @"playertwo";
+static NSString * wifeAccount    = @"playerone";
+static NSString * husbandAccount = @"playertwo";
 
 #endif /* BaseHeaders_h */
