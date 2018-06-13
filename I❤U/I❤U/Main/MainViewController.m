@@ -9,10 +9,18 @@
 #import "BaseHeaders.h"
 #import "MainViewController.h"
 #import "CoverView.h"
+#import "BaseTabBarController.h"
+#import "BaseNavigationController.h"
+#import "FunctionOneViewModel.h"
 #import "FunctionOneHomeViewController.h"
+#import "FunctionTwoViewModel.h"
 #import "FunctionTwoHomeViewController.h"
 #import "FunctionThreeHomeViewController.h"
+#import "FunctionThreeViewModel.h"
 #import "FunctionFourHomeViewController.h"
+#import "LOVEModel.h"
+#import "LOVEViewModel.h"
+#import "LOVELViewController.h"
 
 typedef NS_ENUM(NSUInteger, ButtonTag) {
     kButtonTagFirst = 0,
@@ -54,6 +62,11 @@ static CGFloat const coverAnimDuration = 0.25;
     [self _setupData];
     [self _setupMainTabController];
     [self _setupCoverSelectView];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.mainTabController.selectedIndex = 1;
 }
 
 #pragma mark - action
@@ -261,15 +274,18 @@ static CGFloat const coverAnimDuration = 0.25;
     self.mainTabController = [[BaseTabBarController alloc] init];
     self.mainTabController.tabBar.hidden = YES;
     
-    FunctionOneHomeViewController * functionOneHomeController = [[FunctionOneHomeViewController alloc] initWithNibName:NSStringFromClass([FunctionOneHomeViewController class]) bundle:nil];
+    FunctionOneViewModel * functionOneViewModel = [[FunctionOneViewModel alloc] initWithVCName:NSStringFromClass(FunctionOneHomeViewController.class) withInitType:GULoadVCFromXib];
+    FunctionOneHomeViewController * functionOneHomeController = [functionOneViewModel loadedVC];
     BaseNavigationController * functionOneNavigation = [[BaseNavigationController alloc] initWithRootViewController:functionOneHomeController];
     [self.mainTabController addChildViewController:functionOneNavigation];
     
-    FunctionTwoHomeViewController * functionTwoHomeController = [[FunctionTwoHomeViewController alloc] initWithNibName:NSStringFromClass([FunctionTwoHomeViewController class]) bundle:nil];
+    FunctionTwoViewModel * functionTwoViewModel = [[FunctionTwoViewModel alloc] initWithVCName:NSStringFromClass(FunctionTwoHomeViewController.class) withInitType:GULoadVCFromXib];
+    FunctionTwoHomeViewController * functionTwoHomeController = [functionTwoViewModel loadedVC];
     BaseNavigationController * functionTwoNavigation = [[BaseNavigationController alloc] initWithRootViewController:functionTwoHomeController];
     [self.mainTabController addChildViewController:functionTwoNavigation];
     
-    FunctionThreeHomeViewController * functionThreeHomeController = [[FunctionThreeHomeViewController alloc] initWithNibName:NSStringFromClass([FunctionThreeHomeViewController class]) bundle:nil];
+    FunctionThreeViewModel * funtionThreeViewModel = [[FunctionThreeViewModel alloc] initWithVCName:NSStringFromClass(FunctionThreeHomeViewController.class) withInitType:GULoadVCFromXib];
+    FunctionThreeHomeViewController * functionThreeHomeController = [funtionThreeViewModel loadedVC];
     BaseNavigationController * functionThreeNavigation = [[BaseNavigationController alloc] initWithRootViewController:functionThreeHomeController];
     [self.mainTabController addChildViewController:functionThreeNavigation];
     
@@ -312,6 +328,6 @@ static CGFloat const coverAnimDuration = 0.25;
     
     UIPinchGestureRecognizer *pinch =[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchAction:)];
     [coverView addGestureRecognizer:pinch];
-    
 }
+
 @end

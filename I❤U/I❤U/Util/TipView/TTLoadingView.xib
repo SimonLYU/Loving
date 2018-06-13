@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTTipView">
+            <connections>
+                <outlet property="backgroundView" destination="FEC-wc-nmM" id="Dsv-Nr-O2i"/>
+                <outlet property="contentHeightConstraint" destination="0Rb-hZ-BPy" id="Hfc-xE-5Nu"/>
+                <outlet property="contentView" destination="qno-LE-6NX" id="DGx-20-UXu"/>
+                <outlet property="contentWidthConstraint" destination="9j4-S1-or8" id="2UP-RT-Q3d"/>
+                <outlet property="spinner" destination="cmc-Qx-8Z5" id="5WX-g0-WNE"/>
+                <outlet property="spinnerTopConstraint" destination="JVM-CO-0YO" id="eHQ-Jx-ghz"/>
+                <outlet property="textLabel" destination="U19-5T-KVe" id="o0I-Ai-OR5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qno-LE-6NX">
+                    <rect key="frame" x="80" y="224" width="160" height="120"/>
+                    <subviews>
+                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEC-wc-nmM">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cmc-Qx-8Z5">
+                            <rect key="frame" x="62" y="42" width="37" height="37"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加载中..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U19-5T-KVe">
+                            <rect key="frame" x="20" y="99" width="120" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="0Rb-hZ-BPy"/>
+                        <constraint firstItem="FEC-wc-nmM" firstAttribute="width" secondItem="qno-LE-6NX" secondAttribute="width" id="7zj-8K-Egg"/>
+                        <constraint firstAttribute="width" constant="160" id="9j4-S1-or8"/>
+                        <constraint firstItem="cmc-Qx-8Z5" firstAttribute="top" secondItem="qno-LE-6NX" secondAttribute="top" constant="42" id="JVM-CO-0YO"/>
+                        <constraint firstAttribute="centerY" secondItem="FEC-wc-nmM" secondAttribute="centerY" id="UDL-zM-Tul"/>
+                        <constraint firstAttribute="centerX" secondItem="cmc-Qx-8Z5" secondAttribute="centerX" id="kGA-xE-292"/>
+                        <constraint firstAttribute="centerX" secondItem="FEC-wc-nmM" secondAttribute="centerX" id="kkp-Dg-cUG"/>
+                        <constraint firstAttribute="trailing" secondItem="U19-5T-KVe" secondAttribute="trailing" constant="20" id="tbm-Ie-6Vj"/>
+                        <constraint firstItem="U19-5T-KVe" firstAttribute="top" secondItem="cmc-Qx-8Z5" secondAttribute="bottom" constant="20" id="uaR-cF-237"/>
+                        <constraint firstItem="FEC-wc-nmM" firstAttribute="height" secondItem="qno-LE-6NX" secondAttribute="height" id="wmA-nU-POJ"/>
+                        <constraint firstItem="U19-5T-KVe" firstAttribute="leading" secondItem="qno-LE-6NX" secondAttribute="leading" constant="20" id="yhd-kJ-ju0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="qno-LE-6NX" secondAttribute="centerX" id="Lc5-hc-UUe"/>
+                <constraint firstAttribute="centerY" secondItem="qno-LE-6NX" secondAttribute="centerY" id="hHy-Sm-R1j"/>
+            </constraints>
+            <point key="canvasLocation" x="239" y="163"/>
+        </view>
+    </objects>
+</document>

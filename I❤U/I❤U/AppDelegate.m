@@ -6,8 +6,10 @@
 //  Copyright © 2018年 吕旭明. All rights reserved.
 //
 
+#import "BaseHeaders.h"
 #import "AppDelegate.h"
 #import "Log.h"
+#import <HyphenateLite/HyphenateLite.h>
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
@@ -23,43 +25,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Log info:NSStringFromClass(self.class) message:@"onInit"];
     
-    if (SYSTEM_VERSION >= 10.0) {
-        //iOS10特有
-        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        // 必须写代理，不然无法监听通知的接收与点击
-        center.delegate = self;
-        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-            if (granted) {
-                // 点击允许
-                NSLog(@"注册成功");
-                [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-                    NSLog(@"%@", settings);
-                }];
-            } else {
-                // 点击不允许
-                NSLog(@"注册失败");
-            }
-        }];
-    }else if ([[UIDevice currentDevice].systemVersion floatValue] >8.0){
-        //iOS8 - iOS10
-        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
-        
-    }else if ([[UIDevice currentDevice].systemVersion floatValue] < 8.0) {
-        //iOS8系统以下
-        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
-    }
-    // 注册获得device Token
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    //apns
+    [self setupLocalPushNotification:application];
     
-    //LocalNotification :  每天中午12点发一条通知
-    UILocalNotification *local  = [[UILocalNotification alloc] init];
-    local.fireDate = [NSDate dateWithTimeIntervalSince1970:4*60*60];//ps:since1970是从北京时间1970年1月1日早上8点开始算
-    local.soundName = UILocalNotificationDefaultSoundName;
-    local.alertBody = @"老婆大人,中午十二点到了,你家亲爱的又想你了哦~";
-    local.repeatInterval = kCFCalendarUnitDay;//循环通知的周期:每天
-    local.timeZone = [NSTimeZone defaultTimeZone];
-    local.applicationIconBadgeNumber = 0; //应用程序的右上角小数字
-    [[UIApplication sharedApplication] scheduleLocalNotification:local];
+    //环信
+    //AppKey:注册的AppKey，详细见下面注释。
+    //apnsCertName:推送证书名（不需要加后缀），详细见下面注释。
+    EMOptions *options = [EMOptions optionsWithAppkey:@"lyuxuming#loving"];
+//    options.apnsCertName = @"istore_dev";
+    [[EMClient sharedClient] initializeSDKWithOptions:options];
     
     return YES;
 }
@@ -83,11 +57,15 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyEneterBackground object:nil];
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyEnterForeground object:nil];
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 
 
@@ -100,5 +78,46 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - private notification
+
+- (void)setupLocalPushNotification:(UIApplication *)application{
+//    if (SYSTEM_VERSION >= 10.0) {
+//        //iOS10特有
+//        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+//        // 必须写代理，不然无法监听通知的接收与点击
+//        center.delegate = self;
+//        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+//            if (granted) {
+//                // 点击允许
+//                NSLog(@"注册成功");
+//                [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+//                    NSLog(@"%@", settings);
+//                }];
+//            } else {
+//                // 点击不允许
+//                NSLog(@"注册失败");
+//            }
+//        }];
+//    }else if ([[UIDevice currentDevice].systemVersion floatValue] >8.0){
+//        //iOS8 - iOS10
+//        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge categories:nil]];
+//
+//    }else if ([[UIDevice currentDevice].systemVersion floatValue] < 8.0) {
+//        //iOS8系统以下
+//        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+//    }
+//    // 注册获得device Token
+//    [[UIApplication sharedApplication] registerForRemoteNotifications];
+//
+//    //LocalNotification :  每天中午12点发一条通知
+//    UILocalNotification *local  = [[UILocalNotification alloc] init];
+//    local.fireDate = [NSDate dateWithTimeIntervalSince1970:4*60*60];//ps:since1970是从北京时间1970年1月1日早上8点开始算
+//    local.soundName = UILocalNotificationDefaultSoundName;
+//    local.alertBody = @"老婆大人,中午十二点到了,你家亲爱的又想你了哦~";
+//    local.repeatInterval = kCFCalendarUnitDay;//循环通知的周期:每天
+//    local.timeZone = [NSTimeZone defaultTimeZone];
+//    local.applicationIconBadgeNumber = 0; //应用程序的右上角小数字
+//    [[UIApplication sharedApplication] scheduleLocalNotification:local];
+}
 
 @end

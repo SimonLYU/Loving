@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[FunctionThreeViewModel mappingPlanes]:FunctionThreeViewModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "plane.position.y">
+            </PersistentString>
+            <PersistentString
+               value = "plane.position.x">
+            </PersistentString>
+            <PersistentString
+               value = "plane.position.y + 1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FunctionThreeHomeViewController viewWillAppear:]:FunctionThreeHomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.viewModel.targetPlanesMapString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
