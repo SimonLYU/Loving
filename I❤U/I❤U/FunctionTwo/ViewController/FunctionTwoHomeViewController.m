@@ -136,7 +136,7 @@
     }];
     
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"loginSuccessKey" object:nil] subscribeNext:^(id x) {
-        [IMManager.shareManager.fetchServiceMessageListCommand execute:nil];
+        [IMManager.shareManager.fetchServiceMessageListCommand execute:@(YES)];
     }];
 }
 

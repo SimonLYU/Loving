@@ -112,6 +112,7 @@
 - (RACCommand *)fetchServiceMessageListCommand{
     if (!_fetchServiceMessageListCommand) {
         _fetchServiceMessageListCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            BOOL shouldUpdateMessagelist = [input boolValue];
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 
                 //本地历史消息
@@ -142,11 +143,11 @@
                                         }
                                     }
                                 }
+                                //封装一层message
                                 NSArray * newLoveMessages = [self insertCellHeight:aMessagesWithoutCommand];
                                 NSArray * newCommands = [self insertCellHeight:aCommands];
                                 NSMutableArray * messages = [NSMutableArray arrayWithArray:newLoveMessages];
                                 NSMutableArray * commands = [NSMutableArray arrayWithArray:newCommands];
-                                //封装一层message
                                 //service丢失消息
                                 NSMutableArray * aResultListWithoutCommand = [NSMutableArray array];
                                 NSMutableArray * aResultCommands = [NSMutableArray array];
@@ -163,10 +164,16 @@
                                         }
                                     }
                                 }
+                                //IM:游戏初始化时,拉取历史消息,不需要更新IM,否则会重复出现两条相同的IM消息
+                                if (shouldUpdateMessagelist) {
+                                    NSArray * newServiceLoveMessages = [self insertCellHeight:aResultListWithoutCommand];
+                                    [messages addObjectsFromArray:newServiceLoveMessages];
+                                    [messages addObjectsFromArray:self.messageList];
+                                    self.messageList = messages;
+                                }
                                 
-                                NSArray * newServiceLoveMessages = [self insertCellHeight:aResultListWithoutCommand];
+                                //游戏:
                                 NSArray * newServiceCommands = [self insertCellHeight:aResultCommands];
-                                [messages addObjectsFromArray:newServiceLoveMessages];
                                 [commands addObjectsFromArray:newServiceCommands];
                                 //插入一个提示
                                 EMMessage *message = [[EMMessage alloc] initWithConversationID:[LOVEModel shareModel].conversationId from:[LOVEModel shareModel].toAccount to:[LOVEModel shareModel].fromAccount body:[[EMTextMessageBody alloc] initWithText:@">>以上为历史消息<<"] ext:nil];
@@ -174,9 +181,7 @@
                                 NSArray * aTipMessage = [self insertCellHeight:@[message]];
                                 [commands addObjectsFromArray:aTipMessage];
                                 //最新新消息
-                                [messages addObjectsFromArray:self.messageList];
                                 [commands addObjectsFromArray:self.gameMessageList];
-                                self.messageList = messages;
                                 self.gameMessageList = commands;
                             }
                             [subscriber sendNext:nil];

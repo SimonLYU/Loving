@@ -51,7 +51,7 @@
     [self _setupLoginView];
     [self registerRacsignal];
     
-    [IMManager.shareManager.fetchServiceMessageListCommand execute:nil];
+    [IMManager.shareManager.fetchServiceMessageListCommand execute:@(NO)];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
