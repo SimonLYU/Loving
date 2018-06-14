@@ -89,7 +89,11 @@
         EMTextMessageBody *textBody = (EMTextMessageBody *)message.emMessage.body;
         NSMutableString * text = [NSMutableString stringWithString:textBody.text];
         [text deleteCharactersInRange:NSMakeRange(0, kFireScheme.length)];
-        
+        LOVEMessage * lastMessage = [IMManager shareManager].gameMessageList.lastObject;
+        if ([message.emMessage.from isEqualToString:lastMessage.emMessage.from]) {
+            [Log info:NSStringFromClass(self.class) message:@"错误:玩家%@同一回合攻击了第二次:%@",message.emMessage.from,text];
+            return;
+        }
         if (message.isFromMe) {//我攻击了某一点
             NSMutableArray * destoryPoints = [NSMutableArray arrayWithArray:self.targetDestroyPoints];
             [destoryPoints addObject:text];
