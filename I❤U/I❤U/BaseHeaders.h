@@ -33,8 +33,15 @@ lipo -create HyphenateLite_armv7 HyphenateLite_arm64 -output HyphenateLite
 mv HyphenateLite HyphenateLite.framework/
  */
 
-#define pixelWH (UIScreen.mainScreen.bounds.size.width * 0.1)
+//#define WIFE_VERSION //给老婆的版本要打开注释
 
+#define pixelWH (UIScreen.mainScreen.bounds.size.width * 0.1)
+#pragma mark - NSUserDefaults
+static NSString * const kRegisterCount           = @"registerCount";
+static NSString * const kLastLoginAccount        = @"lastLoginAccount";
+static NSString * const kLastLoginPassword       = @"lastLoginPassword";
+
+#pragma mark - NSNotification
 static NSString * const kCoverScaleChangeName    = @"coverScaleChange";
 static NSString * const kCoverDoubleTapped       = @"coverDoubleTapped";
 
@@ -44,12 +51,19 @@ static NSString * const kNotificationKeyEnterForeground     = @"notificationKeyE
 static NSString * const kNotificationKeyFire    = @"notificationKeyFire";
 static NSString * const kNotificationKeyStart   = @"notificationKeyStart";
 static NSString * const kNotificationKeyEnd     = @"notificationKeyEnd";
+static NSString * const kNotificationKeyReset   = @"notificationKeyReset";
 
+static NSString * const kNotificationLoginSuccessKey            = @"loginSuccessKey";
+static NSString * const kNotificationKeyChangeTargetAccount     = @"notificationKeyChangeTargetAccount";
+
+#pragma mark - Scheme
 static NSString * const kFireScheme      = @"fire://";
 static NSString * const kStartScheme     = @"start://";
 static NSString * const kEndScheme       = @"end://";
 static NSString * const kSysScheme       = @"sys://";
+static NSString * const kResetScheme     = @"reset://";
 
+#pragma mark - Game
 static NSString * const kPlaneBlank = @"0";
 static NSString * const kPlaneBody  = @"1";
 static NSString * const kPlaneHead  = @"2";
@@ -57,10 +71,11 @@ static NSString * const kPlaneHead  = @"2";
 static NSInteger airportLength = 10;
 static NSInteger airportHeight = 12;
 
-static NSString * wifeAccount    = @"test1";
-static NSString * husbandAccount = @"test2";
+#pragma mark - Love Account
+static NSString * wifeAccount    = @"yyr";
+static NSString * husbandAccount = @"lxm";
 
-//static NSString * wifeAccount    = @"playerone";
-//static NSString * husbandAccount = @"playertwo";
+//登录密码长度判断正则表达式
+#define kUserAccountRegiex @"^[0-9a-z]{3,16}$"
 
 #endif /* BaseHeaders_h */

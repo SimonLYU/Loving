@@ -40,6 +40,8 @@
         text = [NSString stringWithFormat:@"%@ %@",[[IMManager shareManager] nickForAccount:message.emMessage.from],@"已准备"];
     }else if ([text hasPrefix:kEndScheme]){
         text = [NSString stringWithFormat:@"%@ %@",[[IMManager shareManager] nickForAccount:message.emMessage.from],@"重置了战场"];
+    }else if ([text hasPrefix:kResetScheme]){
+        text = [NSString stringWithFormat:@"%@ %@",[[IMManager shareManager] nickForAccount:message.emMessage.from],@"离开了房间"];
     }else if ([text hasPrefix:kFireScheme]){
         NSMutableString * pointText = [NSMutableString stringWithString:text];
         [pointText deleteCharactersInRange:NSMakeRange(0, kFireScheme.length)];

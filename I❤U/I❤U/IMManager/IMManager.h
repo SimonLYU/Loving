@@ -26,4 +26,6 @@
 
 - (NSString *)nickForAccount:(NSString *)account;
 
+- (BOOL)checkAccount:(NSString *)account;
+
 @end

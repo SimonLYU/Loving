@@ -35,26 +35,18 @@
                 EMError *error = [[EMClient sharedClient] loginWithUsername:account password:@"1314"];
                 if (!error) {
                     [Log info:NSStringFromClass(self.class) message:@"%@登录成功",toastString];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:@"loginSuccessKey" object:@{
-                                                                                                           @"goNext" : @(YES),
-                                                                                                           @"account" : loginButton.tag == 1000 ? husbandAccount : wifeAccount}];
                     LOVEModel * loveModel = [LOVEModel shareModel];
                     loveModel.conversation = [[EMClient sharedClient].chatManager getConversation:loginButton.tag == 1000 ? husbandAccount : wifeAccount type:EMConversationTypeChat createIfNotExist:YES];
                     loveModel.fromAccount = account;
                     loveModel.toAccount = loginButton.tag == 1000 ? husbandAccount : wifeAccount;
                     
-                    [subscriber sendNext:@{
-                                           @"goNext" : @(YES),
-                                           @"account" : account
-                                           }];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"loginSuccessKey" object:nil];
+                    [subscriber sendNext:nil];
                     [subscriber sendCompleted];
                     [self dismissViewModelAnimated:YES completion:nil];
                 }else{
                     [Log info:NSStringFromClass(self.class) message:@"%@登录失败",toastString];
-                    [subscriber sendNext:@{
-                                           @"goNext" : @(NO),
-                                           @"account" : account
-                                           }];
+                    [subscriber sendNext:nil];
                     [subscriber sendCompleted];
                 }
                 

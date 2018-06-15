@@ -128,7 +128,7 @@
             NSMutableString * text = [NSMutableString stringWithString:textBody.text];
             [text deleteCharactersInRange:NSMakeRange(0, kStartScheme.length)];
             
-             //解码
+            //解码
             NSMutableArray * planeMap = [NSMutableArray array];
             NSArray *array = [text componentsSeparatedByString:@"\n"];
             for (NSString * string in array) {
@@ -152,6 +152,17 @@
             self.targetPlanesMap = nil;
             self.targetIsReady = NO;
         }
+    }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyReset object:nil] subscribeNext:^(id x) {
+        self.gameState = kGameStateEnded;
+        
+        //完全对出另一方的游戏,双方清空对方的所有状态 并 自己取消准备
+        self.targetPlanesMapString = nil;
+        self.targetPlanesMap = nil;
+        self.targetDestroyPoints = nil;
+        self.targetIsReady = NO;
+        //自己取消准备
+        self.iAmReady = NO;
     }];
 }
 
@@ -308,6 +319,48 @@
         }];
     }
     return _endOrAddCommand;
+}
+
+- (RACCommand *)endExpiredGameCommand{
+    if (!_endExpiredGameCommand) {
+        _endExpiredGameCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            if (!LOVEModel.shareModel.lastToAccount || !LOVEModel.shareModel.lastConversationId || !LOVEModel.shareModel.lastConversation) {
+                [Log info:NSStringFromClass(self.class) message:@"没有上一局游戏"];
+                return [RACSignal empty];
+            }
+            [self resetGame];
+            self.targetPlanesMapString = nil;
+            self.targetPlanesMap = nil;
+            self.targetDestroyPoints = nil;
+            self.targetIsReady = NO;
+            //todo...上面的清空放在收到消息的通知里来做
+            NSString * sendString = [NSString stringWithFormat:@"%@%@",kResetScheme,[LOVEModel shareModel].fromAccount];
+            EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithText:sendString];
+            NSString *from = [[EMClient sharedClient] currentUsername];
+            [Log info:NSStringFromClass(self.class) message:@"current user name = %@",from];
+            //生成Message
+            EMMessage *message = [[EMMessage alloc] initWithConversationID:[LOVEModel shareModel].lastConversationId from:from to:[LOVEModel shareModel].lastToAccount body:body ext:nil];
+            message.chatType = EMChatTypeChat;
+            
+            [[EMClient sharedClient].chatManager sendMessage:message progress:^(int progress) {
+                [Log info:NSStringFromClass(self.class) message:@"progress = %i" , progress];
+            } completion:^(EMMessage *aMessage, EMError *aError) {
+                if (!aError) {
+                    [IMManager.shareManager.receiveNewMessageCommand execute:@[aMessage]];
+                    [Log info:NSStringFromClass(self.class) message:@"send complete = %@",sendString];
+                }else {
+                    [Log info:NSStringFromClass(self.class) message:@"send fail error = %@",aError.errorDescription];
+                    [UIUtil showHint:[NSString stringWithFormat:@"登录失效,请重启app(%@)",aError.errorDescription]];
+                }
+            }];
+            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                [subscriber sendNext:nil];
+                [subscriber sendCompleted];
+                return nil;
+            }];
+        }];
+    }
+    return _endExpiredGameCommand;
 }
 
 #pragma mark - private

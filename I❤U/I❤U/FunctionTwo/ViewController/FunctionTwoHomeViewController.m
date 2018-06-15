@@ -20,6 +20,8 @@
 #import "UIColor+Extension.h"
 #import "LOVEModel.h"
 #import "IMManager.h"
+#import "LoginViewModel.h"
+#import "LoginViewController.h"
 
 #define MAX_INPUTVIEW_HEIGHT 100
 #define MIN_INPUTVIEW_HEIGHT 45
@@ -135,7 +137,7 @@
         [self resetAnimationView];
     }];
     
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"loginSuccessKey" object:nil] subscribeNext:^(id x) {
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationLoginSuccessKey object:nil] subscribeNext:^(id x) {
         [IMManager.shareManager.fetchServiceMessageListCommand execute:@(YES)];
     }];
 }
@@ -279,8 +281,15 @@
 #pragma mark - private loginView
 - (void)_setupLoginView{
     if (![LOVEModel shareModel].conversation) {
-        LOVEViewModel * loginViewModel = [[LOVEViewModel alloc] initWithVCName:NSStringFromClass(LOVELViewController.class) withInitType:GULoadVCFromXib];
+        BaseViewModel * loginViewModel = nil;
+#ifdef WIFE_VERSION
+        loginViewModel = [[LOVEViewModel alloc] initWithVCName:NSStringFromClass(LOVELViewController.class) withInitType:GULoadVCFromXib];
         [self.viewModel presentViewModel:loginViewModel animated:NO completion:nil];
+#else
+        
+        loginViewModel = [[LoginViewModel alloc] initWithVCName:NSStringFromClass(LoginViewController.class) withInitType:GULoadVCFromXib];
+        [self.viewModel presentViewModel:loginViewModel animated:YES completion:nil];
+#endif
     }
 }
 #pragma mark - animation

@@ -22,8 +22,22 @@
 
 #pragma mark - setter
 - (void)setConversation:(EMConversation *)conversation{
+    if (_conversation) {
+        self.lastConversation = _conversation;
+    }
     _conversation = conversation;
     self.conversationId = conversation.conversationId;
+}
+- (void)setLastConversation:(EMConversation *)lastConversation{
+    _lastConversation = lastConversation;
+    self.lastConversationId = lastConversation.conversationId;
+}
+
+- (void)setToAccount:(NSString *)toAccount{
+    if (_toAccount) {
+        self.lastToAccount = _toAccount;
+    }
+    _toAccount = toAccount;
 }
 
 @end

@@ -68,6 +68,8 @@
                         [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyStart object:[self insertCellHeight:@[message]].lastObject];
                     }else if ([textBody.text hasPrefix:kEndScheme]){//一方结束游戏
                         [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyEnd object:[self insertCellHeight:@[message]].lastObject];
+                    }else if ([textBody.text hasPrefix:kResetScheme]){//一方完全退出游戏
+                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyReset object:[self insertCellHeight:@[message]].lastObject];
                     }
                 }
                 
@@ -76,14 +78,19 @@
                     EMTextMessageBody *textBody = (EMTextMessageBody *)msgBody;
                     if ([textBody.text hasPrefix:kFireScheme] ||
                         [textBody.text hasPrefix:kStartScheme] ||
+                        [textBody.text hasPrefix:kResetScheme] ||
                         [textBody.text hasPrefix:kEndScheme]) {
+                        
+                        if ([textBody.text hasPrefix:kResetScheme] &&
+                            [message.from isEqualToString:LOVEModel.shareModel.fromAccount]) {//如果是我发的reset消息,过掉不展示
+                            break;
+                        }
                         [newCommand addObject:message];
                     }else{
                         [newMessageWithCommand addObject:message];
                     }
                 }
             }
-            
             
             
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -136,7 +143,12 @@
                                         EMTextMessageBody *textBody = (EMTextMessageBody *)msgBody;
                                         if ([textBody.text hasPrefix:kFireScheme] ||
                                             [textBody.text hasPrefix:kStartScheme] ||
+                                            [textBody.text hasPrefix:kResetScheme] ||
                                             [textBody.text hasPrefix:kEndScheme]) {
+                                            if ([textBody.text hasPrefix:kResetScheme] &&
+                                                [message.from isEqualToString:LOVEModel.shareModel.fromAccount]) {//如果是我发的reset消息,过掉不展示
+                                                break;
+                                            }
                                             [aCommands addObject:message];
                                         }else{
                                             [aMessagesWithoutCommand addObject:message];
@@ -157,7 +169,12 @@
                                         EMTextMessageBody *textBody = (EMTextMessageBody *)msgBody;
                                         if ([textBody.text hasPrefix:kFireScheme] ||
                                             [textBody.text hasPrefix:kStartScheme] ||
+                                            [textBody.text hasPrefix:kResetScheme] ||
                                             [textBody.text hasPrefix:kEndScheme]) {
+                                            if ([textBody.text hasPrefix:kResetScheme] &&
+                                                [message.from isEqualToString:LOVEModel.shareModel.fromAccount]) {//如果是我发的reset消息,过掉不展示
+                                                break;
+                                            }
                                             [aResultCommands addObject:message];
                                         }else{
                                             [aResultListWithoutCommand addObject:message];
@@ -234,6 +251,13 @@
     CGFloat cellHeight = contentSize.height;
     cellHeight += 10;//上下边距
     return cellHeight;
+}
+
+- (BOOL)checkAccount:(NSString *)account
+{
+    NSPredicate *loginPwdPre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", kUserAccountRegiex];
+    BOOL isRight = [loginPwdPre evaluateWithObject:account];
+    return isRight;
 }
 
 #pragma mark - private

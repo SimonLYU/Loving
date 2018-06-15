@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43A5D10082B96E023F5CC9C5 /* libPods-ヾ(･ε･｀*).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3056A9519E5764F455F48D60 /* libPods-ヾ(･ε･｀*).a */; };
 		9D7AC3E2206235F800592C74 /* HttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7AC3E1206235F800592C74 /* HttpUtil.m */; };
+		F42FFB3C20D362850046F507 /* FunctionFourViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FFB3B20D362850046F507 /* FunctionFourViewModel.m */; };
 		F440CE2620C9094F002EFB87 /* FunctionFourHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CE2420C9094F002EFB87 /* FunctionFourHomeViewController.m */; };
 		F440CE2720C9094F002EFB87 /* FunctionFourHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CE2520C9094F002EFB87 /* FunctionFourHomeViewController.xib */; };
 		F440CE2E20C90993002EFB87 /* FunctionThreeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CE2B20C90993002EFB87 /* FunctionThreeHomeViewController.m */; };
@@ -243,6 +244,17 @@
 		F4B7CD36204FF7F500676D18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7CD35204FF7F500676D18 /* main.m */; };
 		F4B7CD3E2050003C00676D18 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7CD3D2050003C00676D18 /* MainViewController.m */; };
 		F4B7CD75205136DA00676D18 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7CD74205136DA00676D18 /* CoverView.m */; };
+		F4C0A97E20D2629000E86A65 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A97C20D2629000E86A65 /* LoginViewController.m */; };
+		F4C0A97F20D2629000E86A65 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C0A97D20D2629000E86A65 /* LoginViewController.xib */; };
+		F4C0A98220D262A100E86A65 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98120D262A100E86A65 /* LoginViewModel.m */; };
+		F4C0A98820D2758700E86A65 /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98620D2758600E86A65 /* DeviceUtil.m */; };
+		F4C0A99020D275BE00E86A65 /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4C0A98A20D275BE00E86A65 /* SSKeychain.strings */; };
+		F4C0A99120D275BE00E86A65 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98D20D275BE00E86A65 /* SSKeychain.m */; };
+		F4C0A99220D275BE00E86A65 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98F20D275BE00E86A65 /* SSKeychainQuery.m */; };
+		F4C0A99520D275DC00E86A65 /* SimulateIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A99420D275DC00E86A65 /* SimulateIDFA.m */; };
+		F4C0A99920D2762A00E86A65 /* FDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A99820D2762900E86A65 /* FDAlertView.m */; };
+		F4C0A9EE20D27EC600E86A65 /* ChallangeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A9ED20D27EC600E86A65 /* ChallangeAlertView.m */; };
+		F4C0A9F020D27ED100E86A65 /* ChallangeAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C0A9EF20D27ED100E86A65 /* ChallangeAlertView.xib */; };
 		F4D701BE20CA201500172456 /* LOVEMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D701BC20CA201500172456 /* LOVEMessageCell.m */; };
 		F4D701BF20CA201500172456 /* LOVEMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D701BD20CA201500172456 /* LOVEMessageCell.xib */; };
 		F4D701C220CA588E00172456 /* LOVEMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D701C120CA588E00172456 /* LOVEMessage.m */; };
@@ -270,6 +282,8 @@
 		9D7AC3E1206235F800592C74 /* HttpUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpUtil.m; sourceTree = "<group>"; };
 		9D7AC3E3206276B900592C74 /* ヾ(･ε･｀*).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ヾ(･ε･｀*).entitlements"; sourceTree = "<group>"; };
 		BCE2375003879E556CC07929 /* Pods-ヾ(･ε･｀*).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ヾ(･ε･｀*).release.xcconfig"; path = "Pods/Target Support Files/Pods-ヾ(･ε･｀*)/Pods-ヾ(･ε･｀*).release.xcconfig"; sourceTree = "<group>"; };
+		F42FFB3A20D362850046F507 /* FunctionFourViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionFourViewModel.h; sourceTree = "<group>"; };
+		F42FFB3B20D362850046F507 /* FunctionFourViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionFourViewModel.m; sourceTree = "<group>"; };
 		F440CE1D20C9042C002EFB87 /* HyphenateLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HyphenateLite.framework; sourceTree = "<group>"; };
 		F440CE2320C9094F002EFB87 /* FunctionFourHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionFourHomeViewController.h; sourceTree = "<group>"; };
 		F440CE2420C9094F002EFB87 /* FunctionFourHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionFourHomeViewController.m; sourceTree = "<group>"; };
@@ -753,6 +767,26 @@
 		F4B7CD4C2050039300676D18 /* BaseHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHeaders.h; sourceTree = "<group>"; };
 		F4B7CD73205136DA00676D18 /* CoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
 		F4B7CD74205136DA00676D18 /* CoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverView.m; sourceTree = "<group>"; };
+		F4C0A97B20D2629000E86A65 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F4C0A97C20D2629000E86A65 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F4C0A97D20D2629000E86A65 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		F4C0A98020D262A100E86A65 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		F4C0A98120D262A100E86A65 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		F4C0A98620D2758600E86A65 /* DeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtil.m; sourceTree = "<group>"; };
+		F4C0A98720D2758700E86A65 /* DeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtil.h; sourceTree = "<group>"; };
+		F4C0A98B20D275BE00E86A65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SSKeychain.strings; sourceTree = "<group>"; };
+		F4C0A98C20D275BE00E86A65 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		F4C0A98D20D275BE00E86A65 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		F4C0A98E20D275BE00E86A65 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		F4C0A98F20D275BE00E86A65 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
+		F4C0A99320D275DC00E86A65 /* SimulateIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulateIDFA.h; sourceTree = "<group>"; };
+		F4C0A99420D275DC00E86A65 /* SimulateIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulateIDFA.m; sourceTree = "<group>"; };
+		F4C0A99620D275FD00E86A65 /* ConvenienceMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConvenienceMacros.h; sourceTree = "<group>"; };
+		F4C0A99720D2762900E86A65 /* FDAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDAlertView.h; sourceTree = "<group>"; };
+		F4C0A99820D2762900E86A65 /* FDAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDAlertView.m; sourceTree = "<group>"; };
+		F4C0A9EC20D27EC600E86A65 /* ChallangeAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallangeAlertView.h; sourceTree = "<group>"; };
+		F4C0A9ED20D27EC600E86A65 /* ChallangeAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChallangeAlertView.m; sourceTree = "<group>"; };
+		F4C0A9EF20D27ED100E86A65 /* ChallangeAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallangeAlertView.xib; sourceTree = "<group>"; };
 		F4D701BB20CA201500172456 /* LOVEMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOVEMessageCell.h; sourceTree = "<group>"; };
 		F4D701BC20CA201500172456 /* LOVEMessageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOVEMessageCell.m; sourceTree = "<group>"; };
 		F4D701BD20CA201500172456 /* LOVEMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LOVEMessageCell.xib; sourceTree = "<group>"; };
@@ -794,26 +828,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F440CE1C20C9042C002EFB87 /* HyphenateSDK */ = {
+		F42FFB3820D362600046F507 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F440CE1D20C9042C002EFB87 /* HyphenateLite.framework */,
+				F42FFB3A20D362850046F507 /* FunctionFourViewModel.h */,
+				F42FFB3B20D362850046F507 /* FunctionFourViewModel.m */,
 			);
-			path = HyphenateSDK;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F440CE2020C9094F002EFB87 /* Model */ = {
+		F42FFB3920D3626B0046F507 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F440CE2120C9094F002EFB87 /* ViewModel */ = {
+		F440CE1C20C9042C002EFB87 /* HyphenateSDK */ = {
 			isa = PBXGroup;
 			children = (
+				F440CE1D20C9042C002EFB87 /* HyphenateLite.framework */,
 			);
-			path = ViewModel;
+			path = HyphenateSDK;
 			sourceTree = "<group>";
 		};
 		F440CE2220C9094F002EFB87 /* ViewController */ = {
@@ -963,9 +999,13 @@
 		F440CF9020C9359A002EFB87 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F4C0A9EB20D27EB300E86A65 /* Views */,
 				F440CF9420C935F9002EFB87 /* LOVELViewController.h */,
 				F440CF9520C935F9002EFB87 /* LOVELViewController.m */,
 				F440CF9620C935F9002EFB87 /* LOVELViewController.xib */,
+				F4C0A97B20D2629000E86A65 /* LoginViewController.h */,
+				F4C0A97C20D2629000E86A65 /* LoginViewController.m */,
+				F4C0A97D20D2629000E86A65 /* LoginViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -975,6 +1015,8 @@
 			children = (
 				F440CF9920C937CB002EFB87 /* LOVEViewModel.h */,
 				F440CF9A20C937CB002EFB87 /* LOVEViewModel.m */,
+				F4C0A98020D262A100E86A65 /* LoginViewModel.h */,
+				F4C0A98120D262A100E86A65 /* LoginViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1936,6 +1978,11 @@
 		F4B7CD4B2050034B00676D18 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F4C0A99620D275FD00E86A65 /* ConvenienceMacros.h */,
+				F4C0A99720D2762900E86A65 /* FDAlertView.h */,
+				F4C0A99820D2762900E86A65 /* FDAlertView.m */,
+				F4C0A99320D275DC00E86A65 /* SimulateIDFA.h */,
+				F4C0A99420D275DC00E86A65 /* SimulateIDFA.m */,
 				F4D701C320CA7F3B00172456 /* UIColor+Extension.h */,
 				F4D701C420CA7F3B00172456 /* UIColor+Extension.m */,
 				F440D21520C94086002EFB87 /* EaseConvertToCommonEmoticonsHelper.h */,
@@ -1944,13 +1991,16 @@
 				F440CF8A20C92EB3002EFB87 /* StringUtil.m */,
 				F440CF8720C92EB3002EFB87 /* SystemUtil.h */,
 				F440CF8820C92EB3002EFB87 /* SystemUtil.m */,
-				F440CF7F20C92E5B002EFB87 /* TipView */,
 				F440CF7D20C92DCD002EFB87 /* UIUtil.h */,
 				F440CF7C20C92DCD002EFB87 /* UIUtil.m */,
+				F4C0A98720D2758700E86A65 /* DeviceUtil.h */,
+				F4C0A98620D2758600E86A65 /* DeviceUtil.m */,
 				F4546498205147B800832537 /* Log.h */,
 				F4546499205147B800832537 /* Log.m */,
 				9D7AC3E0206235F800592C74 /* HttpUtil.h */,
 				9D7AC3E1206235F800592C74 /* HttpUtil.m */,
+				F440CF7F20C92E5B002EFB87 /* TipView */,
+				F4C0A98920D275BE00E86A65 /* SSKeychain */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2005,9 +2055,9 @@
 		F4B7CD5D205131E500676D18 /* FunctionFour */ = {
 			isa = PBXGroup;
 			children = (
-				F440CE2020C9094F002EFB87 /* Model */,
+				F42FFB3920D3626B0046F507 /* Model */,
+				F42FFB3820D362600046F507 /* ViewModel */,
 				F440CE2220C9094F002EFB87 /* ViewController */,
-				F440CE2120C9094F002EFB87 /* ViewModel */,
 			);
 			path = FunctionFour;
 			sourceTree = "<group>";
@@ -2019,6 +2069,28 @@
 				F4B7CD74205136DA00676D18 /* CoverView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4C0A98920D275BE00E86A65 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				F4C0A98A20D275BE00E86A65 /* SSKeychain.strings */,
+				F4C0A98C20D275BE00E86A65 /* SSKeychain.h */,
+				F4C0A98D20D275BE00E86A65 /* SSKeychain.m */,
+				F4C0A98E20D275BE00E86A65 /* SSKeychainQuery.h */,
+				F4C0A98F20D275BE00E86A65 /* SSKeychainQuery.m */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
+		F4C0A9EB20D27EB300E86A65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4C0A9EC20D27EC600E86A65 /* ChallangeAlertView.h */,
+				F4C0A9ED20D27EC600E86A65 /* ChallangeAlertView.m */,
+				F4C0A9EF20D27ED100E86A65 /* ChallangeAlertView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F4D701BA20CA1FFB00172456 /* Views */ = {
@@ -2099,11 +2171,14 @@
 				F4B7CD33204FF7F500676D18 /* LaunchScreen.storyboard in Resources */,
 				F4D701BF20CA201500172456 /* LOVEMessageCell.xib in Resources */,
 				F440D2E020C94087002EFB87 /* EaseUIResource.bundle in Resources */,
+				F4C0A99020D275BE00E86A65 /* SSKeychain.strings in Resources */,
 				F45BD8F12073610800100E37 /* Info.plist in Resources */,
 				F440D28620C94086002EFB87 /* MJRefresh.bundle in Resources */,
 				F440CE3F20C909B0002EFB87 /* FunctionOneHomeViewController.xib in Resources */,
 				F440CE2720C9094F002EFB87 /* FunctionFourHomeViewController.xib in Resources */,
 				F4B7CD30204FF7F500676D18 /* Assets.xcassets in Resources */,
+				F4C0A9F020D27ED100E86A65 /* ChallangeAlertView.xib in Resources */,
+				F4C0A97F20D2629000E86A65 /* LoginViewController.xib in Resources */,
 				F440CF8420C92E5B002EFB87 /* TTLoadingView.xib in Resources */,
 				F440CE3720C9099F002EFB87 /* FunctionTwoHomeViewController.xib in Resources */,
 				F45BDDA92073741500100E37 /* LOTLocalResource in Resources */,
@@ -2198,6 +2273,7 @@
 				F440D2C320C94086002EFB87 /* FixFopen.c in Sources */,
 				F440D28120C94086002EFB87 /* MJRefreshBackNormalFooter.m in Sources */,
 				F45BD8F02073610800100E37 /* MASViewAttribute.m in Sources */,
+				F4C0A98820D2758700E86A65 /* DeviceUtil.m in Sources */,
 				F440D29020C94086002EFB87 /* MWTapDetectingImageView.m in Sources */,
 				F45BD986207361F900100E37 /* LOTValueInterpolator.m in Sources */,
 				F440D26F20C94086002EFB87 /* EMCDDeviceManager+Remind.m in Sources */,
@@ -2212,6 +2288,7 @@
 				F45BD980207361F900100E37 /* LOTRenderNode.m in Sources */,
 				F4B6CDD820CE1D0E002D6A87 /* FunctionThreeViewModel.m in Sources */,
 				F45BD998207361F900100E37 /* LOTLayerGroup.m in Sources */,
+				F4C0A98220D262A100E86A65 /* LoginViewModel.m in Sources */,
 				F440D29A20C94086002EFB87 /* PSTCollectionViewFlowLayout.m in Sources */,
 				F440D2A420C94086002EFB87 /* SDImageCache.m in Sources */,
 				F440D2AB20C94086002EFB87 /* UIButton+WebCache.m in Sources */,
@@ -2230,6 +2307,7 @@
 				F440D2AA20C94086002EFB87 /* SDWebImagePrefetcher.m in Sources */,
 				F45BD9A3207361F900100E37 /* LOTShapeTransform.m in Sources */,
 				F440D27120C94086002EFB87 /* amrFileCodec.mm in Sources */,
+				F4C0A99220D275BE00E86A65 /* SSKeychainQuery.m in Sources */,
 				F440D2D920C94086002EFB87 /* EaseImageView.m in Sources */,
 				F440D29920C94086002EFB87 /* PSTCollectionViewData.m in Sources */,
 				F45BD9BA207361F900100E37 /* LOTLayerContainer.m in Sources */,
@@ -2252,6 +2330,7 @@
 				F440D2C220C94086002EFB87 /* EaseEmotionManager.m in Sources */,
 				F440D27320C94086002EFB87 /* EMVoiceConverter.mm in Sources */,
 				F440CF8620C92E5B002EFB87 /* TTTipView.m in Sources */,
+				F4C0A99920D2762A00E86A65 /* FDAlertView.m in Sources */,
 				F4B7CD75205136DA00676D18 /* CoverView.m in Sources */,
 				F45BD983207361F900100E37 /* LOTPathInterpolator.m in Sources */,
 				F440D27220C94086002EFB87 /* wav.mm in Sources */,
@@ -2270,6 +2349,7 @@
 				F440D2DE20C94087002EFB87 /* EaseRecordView.m in Sources */,
 				F440D27C20C94086002EFB87 /* MJRefreshHeader.m in Sources */,
 				F440D2BC20C94086002EFB87 /* EaseChineseToPinyin.m in Sources */,
+				F4C0A99520D275DC00E86A65 /* SimulateIDFA.m in Sources */,
 				F440CF7E20C92DCE002EFB87 /* UIUtil.m in Sources */,
 				F440D28420C94086002EFB87 /* MJRefreshNormalHeader.m in Sources */,
 				F45BD9C0207365E200100E37 /* LOTAnimationView+Extension.m in Sources */,
@@ -2293,6 +2373,7 @@
 				F440D28E20C94086002EFB87 /* MWPhoto.m in Sources */,
 				F440D29E20C94086002EFB87 /* PSTGridLayoutInfo.m in Sources */,
 				F440D2A520C94086002EFB87 /* SDWebImageCompat.m in Sources */,
+				F4C0A97E20D2629000E86A65 /* LoginViewController.m in Sources */,
 				F440D2AD20C94086002EFB87 /* UIImage+MultiFormat.m in Sources */,
 				F45BD9BB207361F900100E37 /* LOTCompositionContainer.m in Sources */,
 				F440D27A20C94086002EFB87 /* MJRefreshComponent.m in Sources */,
@@ -2303,6 +2384,7 @@
 				9D7AC3E2206235F800592C74 /* HttpUtil.m in Sources */,
 				F45BD9B5207361F900100E37 /* LOTAnimatedControl.m in Sources */,
 				F440D2D820C94086002EFB87 /* EaseChatToolbarItem.m in Sources */,
+				F4C0A9EE20D27EC600E86A65 /* ChallangeAlertView.m in Sources */,
 				F45BD9A2207361F900100E37 /* LOTShapeFill.m in Sources */,
 				F440D2D520C94086002EFB87 /* EaseBubbleView+Voice.m in Sources */,
 				F440D2B120C94086002EFB87 /* UIView+WebCacheOperation.m in Sources */,
@@ -2314,12 +2396,14 @@
 				F45BD984207361F900100E37 /* LOTSizeInterpolator.m in Sources */,
 				F45BD9A5207361F900100E37 /* CGGeometry+LOTAdditions.m in Sources */,
 				F4D701C520CA7F3B00172456 /* UIColor+Extension.m in Sources */,
+				F42FFB3C20D362850046F507 /* FunctionFourViewModel.m in Sources */,
 				F440D2A220C94086002EFB87 /* MKAnnotationView+WebCache.m in Sources */,
 				F45BD99C207361F900100E37 /* LOTAsset.m in Sources */,
 				F440D27720C94086002EFB87 /* MBProgressHUD.m in Sources */,
 				F440D28920C94086002EFB87 /* UIScrollView+MJRefresh.m in Sources */,
 				F440D2BB20C94086002EFB87 /* UIViewController+HUD.m in Sources */,
 				F440D2A720C94086002EFB87 /* SDWebImageDownloader.m in Sources */,
+				F4C0A99120D275BE00E86A65 /* SSKeychain.m in Sources */,
 				F440D2C120C94086002EFB87 /* EaseEmotionEscape.m in Sources */,
 				F45BD981207361F900100E37 /* LOTTrimPathNode.m in Sources */,
 				F440D2DA20C94087002EFB87 /* EaseTextView.m in Sources */,
@@ -2382,6 +2466,14 @@
 				F4B7CD32204FF7F500676D18 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F4C0A98A20D275BE00E86A65 /* SSKeychain.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4C0A98B20D275BE00E86A65 /* en */,
+			);
+			name = SSKeychain.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -12,10 +12,16 @@
 @interface LOVEModel : NSObject
 
 //IM消息
+
+@property (nonatomic, strong) NSString *fromAccount;
+
 @property (nonatomic, strong) EMConversation *conversation;
 @property (nonatomic, strong) NSString *conversationId;
-@property (nonatomic, strong) NSString *fromAccount;
 @property (nonatomic, strong) NSString *toAccount;
+
+@property (nonatomic, strong) EMConversation *lastConversation;
+@property (nonatomic, strong) NSString *lastConversationId;
+@property (nonatomic, strong) NSString *lastToAccount;
 
 + (LOVEModel *)shareModel;
     

@@ -104,12 +104,5 @@
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
-        <view contentMode="scaleToFill" id="880-ZV-YTB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.09543557363013698" colorSpace="calibratedRGB"/>
-            <viewLayoutGuide key="safeArea" id="2gl-YN-Fk0"/>
-            <point key="canvasLocation" x="558" y="325"/>
-        </view>
     </objects>
 </document>

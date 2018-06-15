@@ -18,7 +18,7 @@
 
 @end
 
-@implementation LOVELViewController
+@implementation LOVELViewController  
 @dynamic viewModel;
 
 - (void)viewDidLoad {
@@ -30,7 +30,6 @@
     [super registerRacsignal];
     self.wifeButton.rac_command = self.viewModel.loginCommand;
     self.husbandButton.rac_command = self.viewModel.loginCommand;
-    
 }
 
 

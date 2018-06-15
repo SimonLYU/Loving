@@ -76,11 +76,17 @@
     //navigationBar
     [self.navigationController.navigationBar setHidden:YES];
     
+    @weakify(self);
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyChangeTargetAccount object:nil] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.viewModel.endExpiredGameCommand execute:nil];
+    }];
+    
+    
     [self.systemTableView registerNib:[UINib nibWithNibName:NSStringFromClass(LOVEMessageCell.class) bundle:nil] forCellReuseIdentifier:@"messageCell"];
     self.systemTableView.delegate = self;
     self.systemTableView.dataSource = self;
     
-    [self resetAnimationView];
     [self setupAirport];
     [self setupSystemTableView];
     [self setupBattleView];
@@ -143,13 +149,13 @@
 }
 #pragma mark - RAC
 - (void)registerRacsignal{
-    //editing 状态变化
     @weakify(self);
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyEnterForeground object:nil] subscribeNext:^(id x) {
         @strongify(self);
         [self resetAnimationView];
     }];
     
+    //editing 状态变化
     [RACObserve(self.viewModel, isEditing) subscribeNext:^(id x) {
         @strongify(self);
         if (self.viewModel.isEditing) {

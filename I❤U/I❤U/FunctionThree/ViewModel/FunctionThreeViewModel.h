@@ -39,4 +39,6 @@ typedef NS_ENUM(NSUInteger, GameState) {
 @property (nonatomic, strong) RACCommand *editOrFinishCommand;
 @property (nonatomic, strong) RACCommand *fireCommand;
 
+@property (nonatomic, strong) RACCommand *endExpiredGameCommand;
+
 @end

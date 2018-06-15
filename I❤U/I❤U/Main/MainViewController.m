@@ -18,6 +18,7 @@
 #import "FunctionThreeHomeViewController.h"
 #import "FunctionThreeViewModel.h"
 #import "FunctionFourHomeViewController.h"
+#import "FunctionFourViewModel.h"
 #import "LOVEModel.h"
 #import "LOVEViewModel.h"
 #import "LOVELViewController.h"
@@ -289,7 +290,8 @@ static CGFloat const coverAnimDuration = 0.25;
     BaseNavigationController * functionThreeNavigation = [[BaseNavigationController alloc] initWithRootViewController:functionThreeHomeController];
     [self.mainTabController addChildViewController:functionThreeNavigation];
     
-    FunctionFourHomeViewController * functionFourHomeController = [[FunctionFourHomeViewController alloc] initWithNibName:NSStringFromClass([FunctionFourHomeViewController class]) bundle:nil];
+    FunctionFourViewModel * functionFourViewModel = [[FunctionFourViewModel alloc] initWithVCName:NSStringFromClass(FunctionFourHomeViewController.class) withInitType:GULoadVCFromXib];
+    FunctionFourHomeViewController * functionFourHomeController = [functionFourViewModel loadedVC];
     BaseNavigationController * functionFourNavigation = [[BaseNavigationController alloc] initWithRootViewController:functionFourHomeController];
     [self.mainTabController addChildViewController:functionFourNavigation];
     
@@ -308,8 +310,13 @@ static CGFloat const coverAnimDuration = 0.25;
     coverView.backgroundColor = [UIColor clearColor];
     self.coverView = coverView;
     [self.view addSubview:coverView];
+    NSArray * buttonNameList = nil;
+#ifdef WIFE_VERSION
+    buttonNameList = @[@"(￣▽￣)",@" (●ﾟωﾟ●)",@"(๑•̀ㅂ•́)و✧",@"O(∩_∩)O"];
+#else
+    buttonNameList = @[@"情话",@"和Ta聊聊",@"飞机棋游戏",@"切换挑战者"];
+#endif
     
-    NSArray * buttonNameList = @[@"(￣▽￣)",@" (●ﾟωﾟ●)",@"(๑•̀ㅂ•́)و✧",@"O(∩_∩)O"];
     NSArray * buttonTagList = @[@(kButtonTagFirst),@(kButtonTagSecond),@(kButtonTagThird),@(kButtonTagForth)];
     for (int i = 0; i < buttonTagList.count; ++i) {
         CGFloat xPos = (i % 2) * BUTTON_WIDTH;
@@ -317,6 +324,7 @@ static CGFloat const coverAnimDuration = 0.25;
         UIButton * tabButton = [[UIButton alloc] initWithFrame:CGRectMake(xPos, yPos, BUTTON_WIDTH, BUTTON_HEIGHT)];
         tabButton.tag = [buttonTagList[i] integerValue];
         [tabButton setTitle:buttonNameList[i] forState:UIControlStateNormal];
+        tabButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
         [tabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [tabButton addTarget:self action:@selector(onTabButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         tabButton.backgroundColor = [UIColor whiteColor];
