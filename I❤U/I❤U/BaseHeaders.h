@@ -33,7 +33,7 @@ lipo -create HyphenateLite_armv7 HyphenateLite_arm64 -output HyphenateLite
 mv HyphenateLite HyphenateLite.framework/
  */
 
-//#define WIFE_VERSION //给老婆的版本要打开注释
+#define WIFE_VERSION //给老婆的版本要打开注释
 
 #define pixelWH (UIScreen.mainScreen.bounds.size.width * 0.1)
 #pragma mark - NSUserDefaults
