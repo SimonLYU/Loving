@@ -22,7 +22,9 @@
 - (RACCommand *)talkTitleCommand{
     if (!_talkTitleCommand) {
         _talkTitleCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @weakify(self)
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                @strongify(self);
                 [self getRandomText];
                 [subscriber sendNext:nil];
                 [subscriber sendCompleted];

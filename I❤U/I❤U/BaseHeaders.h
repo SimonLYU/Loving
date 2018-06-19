@@ -75,7 +75,7 @@ static NSInteger airportHeight = 12;
 static NSString * wifeAccount    = @"yyr";
 static NSString * husbandAccount = @"lxm";
 
-//登录密码长度判断正则表达式
+//注册账号的正则表达式:数字或小写字母组成的3~16位字符串(不可出现大写字母,环信的conversationID不识别大写字母)
 #define kUserAccountRegiex @"^[0-9a-z]{3,16}$"
 
 #endif /* BaseHeaders_h */

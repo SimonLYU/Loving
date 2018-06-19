@@ -174,11 +174,13 @@
     }];
     
     [[RACObserve(IMManager.shareManager, gameMessageList) skip:1] subscribeNext:^(id x) {
+        @strongify(self);
         [self.systemTableView reloadData];
         [self scrollToBottom];
     }];
     
     [RACObserve(self.viewModel, iAmReady) subscribeNext:^(id x) {
+        @strongify(self);
         if (self.viewModel.iAmReady && self.viewModel.targetIsReady) {
             [self.readyButton setTitle:@"游戏中..." forState:UIControlStateDisabled];
             [self.editButton setTitle:@"游戏中..." forState:UIControlStateDisabled];
@@ -195,6 +197,7 @@
         }
     }];
     [RACObserve(self.viewModel, targetIsReady) subscribeNext:^(id x) {
+        @strongify(self);
         if (self.viewModel.iAmReady && self.viewModel.targetIsReady) {
             [self.readyButton setTitle:@"游戏中..." forState:UIControlStateDisabled];
             [self.editButton setTitle:@"游戏中..." forState:UIControlStateDisabled];
@@ -205,14 +208,17 @@
     }];
     
     [RACObserve(self.viewModel, myDestroyPoints) subscribeNext:^(id x) {
+        @strongify(self);
         [self updateAirport];
     }];
     
     [RACObserve(self.viewModel, targetDestroyPoints) subscribeNext:^(id x) {
+        @strongify(self);
         [self updateBattleField];
     }];
     
     [IMManager.shareManager.fetchServiceMessageListCommand.executionSignals.flatten subscribeNext:^(id x) {
+        @strongify(self);
         [self scrollToBottom];
     }];
     

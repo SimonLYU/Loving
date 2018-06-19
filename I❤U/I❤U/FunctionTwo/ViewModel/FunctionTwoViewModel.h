@@ -12,13 +12,8 @@
 
 @interface FunctionTwoViewModel : BaseViewModel
 
-//@property (nonatomic, strong) NSArray *messageList;
 @property (nonatomic, strong) NSString *inputMessage;
 
-//@property (nonatomic, strong) RACCommand *receiveNewMessageCommand;
-//@property (nonatomic, strong) RACCommand *fetchServiceMessageListCommand;
 @property (nonatomic, strong) RACCommand *sendMessageCommand;
-
-//+ (CGFloat)calculateCellHeight:(EMMessage *)message;
 
 @end

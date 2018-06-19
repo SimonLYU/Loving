@@ -68,10 +68,13 @@
     RAC(self.viewModel , inputMessage) = [self.inputTextView.rac_textSignal map:^id(id value) {
         return value;
     }];
+    @weakify(self);
     [RACObserve(self.viewModel, inputMessage) subscribeNext:^(id x) {
+        @strongify(self);
         self.inputTextView.text = self.viewModel.inputMessage;
     }];
     [[RACObserve(IMManager.shareManager, messageList) skip:1] subscribeNext:^(id x) {
+        @strongify(self);
         [self.tableView reloadData];
         
         CGFloat maxScrollY = self.tableView.contentSize.height - self.tableView.bounds.size.height + self.tableView.contentInset.bottom;
@@ -82,12 +85,15 @@
         }
     }];
     [IMManager.shareManager.fetchServiceMessageListCommand.executionSignals.flatten subscribeNext:^(id x) {
+        @strongify(self);
         [self scrollToBottom];
     }];
     [[self.findNewMessageButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
         [self scrollToBottom];
     }];
     [RACObserve(self.inputTextView, contentSize) subscribeNext:^(id x) {
+        @strongify(self);
         CGSize newContentSize = self.inputTextView.contentSize;
         [Log info:NSStringFromClass(self.class) message:@"x = %@",x];
         UITextView *textView = self.inputTextView;
@@ -119,7 +125,6 @@
         
     }];
     
-    @weakify(self);
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kCoverScaleChangeName object:nil] subscribeNext:^(id x) {
         @strongify(self);
         if ([self.inputTextView isFirstResponder]) {

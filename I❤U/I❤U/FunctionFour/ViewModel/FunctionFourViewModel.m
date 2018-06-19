@@ -19,8 +19,9 @@
 
 - (RACCommand *)creatConversationCommand{
     if (!_creatConversationCommand) {
+        @weakify(self);
         _creatConversationCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            
+            @strongify(self);
             if (!self.targetAccount ||
                 [self.targetAccount isEqualToString:@""]) {
                 [UIUtil showHint:@"请输入挑战者账号!"];

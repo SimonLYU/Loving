@@ -56,6 +56,7 @@
     }];
     
     [[RACObserve(self.viewModel, talkTitle) skip:1] subscribeNext:^(id x) {
+        @strongify(self);
         self.detailLabel.text = self.viewModel.talkTitle;
     }];
     

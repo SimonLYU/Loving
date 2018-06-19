@@ -31,8 +31,9 @@
     self.targetPoint = CGPointError;
     self.myDestroyCount = 0;
     self.targetDestroyCount = 0;
-    
+    @weakify(self);
     [RACObserve(self, targetIsReady) subscribeNext:^(id x) {
+        @strongify(self);
         if (self.iAmReady && self.targetIsReady) {
             [self resetGame];
             self.gameState = kGameStateStarting;
@@ -46,6 +47,7 @@
     
     
     [RACObserve(self, iAmReady) subscribeNext:^(id x) {
+        @strongify(self);
         if (self.iAmReady && self.targetIsReady) {
             [self resetGame];
             self.gameState = kGameStateStarting;
@@ -56,6 +58,7 @@
     }];
     
     [RACObserve(self, targetDestroyCount) subscribeNext:^(id x) {
+        @strongify(self);
         if (self.targetDestroyCount >= 3 && self.gameState == kGameStateStarting) {
             self.gameState = kGameStateEnded;
             [UIUtil showHint:@"你赢了!"];
@@ -69,6 +72,7 @@
         }
     }];
     [RACObserve(self, myDestroyCount) subscribeNext:^(id x) {
+        @strongify(self);
         if (self.myDestroyCount >= 3 && self.gameState == kGameStateStarting) {
             self.gameState = kGameStateEnded;
             [UIUtil showHint:@"你输了!"];
@@ -84,6 +88,7 @@
     }];
     
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyFire object:nil] subscribeNext:^(id x) {
+        @strongify(self);
         NSNotification * info = (NSNotification *)x;
         LOVEMessage * message = info.object;
         EMTextMessageBody *textBody = (EMTextMessageBody *)message.emMessage.body;
@@ -119,6 +124,7 @@
         }
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyStart object:nil] subscribeNext:^(id x) {
+        @strongify(self);
         NSNotification * info = (NSNotification *)x;
         LOVEMessage * message = info.object;
         if (message.isFromMe) {//我准备
@@ -142,6 +148,7 @@
         }
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyEnd object:nil] subscribeNext:^(id x) {
+        @strongify(self);
         NSNotification * info = (NSNotification *)x;
         LOVEMessage * message = info.object;
         self.gameState = kGameStateEnded;
@@ -154,6 +161,7 @@
         }
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyReset object:nil] subscribeNext:^(id x) {
+        @strongify(self);
         self.gameState = kGameStateEnded;
         
         //完全对出另一方的游戏,双方清空对方的所有状态 并 自己取消准备
@@ -167,8 +175,10 @@
 }
 
 - (RACCommand *)fireCommand{
+    @weakify(self);
     if (!_fireCommand) {
         _fireCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self);
             LOVEMessage * lastMessage = [IMManager shareManager].gameMessageList.lastObject;
             if (self.gameState != kGameStateStarting) {
                 [UIUtil showHint:@"游戏尚未开始或已经结束"];
@@ -216,7 +226,9 @@
 
 - (RACCommand *)editOrFinishCommand{
     if (!_editOrFinishCommand) {
+        @weakify(self);
         _editOrFinishCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self);
             if (self.isEditing) {
                 self.myPlanesMapString = [self mappingPlanes];
                 if (![self.myPlanesMapString isEqualToString:@""]) {
@@ -233,8 +245,9 @@
 
 - (RACCommand *)readyOrRemoveCommand{
     if (!_readyOrRemoveCommand) {
+        @weakify(self);
         _readyOrRemoveCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            
+            @strongify(self);
             if (self.isEditing) {//减少飞机
                 if (self.planeList.count > 0) {
                     [self.planeList removeLastObject];
@@ -278,7 +291,9 @@
 
 - (RACCommand *)endOrAddCommand{
     if (!_endOrAddCommand) {
+        @weakify(self);
         _endOrAddCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self);
             if (self.isEditing) {//增加飞机
                 if (self.planeList.count < 3) {
                     LOVEPlaneView * plane = [LOVEPlaneView plane];
@@ -323,7 +338,9 @@
 
 - (RACCommand *)endExpiredGameCommand{
     if (!_endExpiredGameCommand) {
+        @weakify(self);
         _endExpiredGameCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self);
             if (!LOVEModel.shareModel.lastToAccount || !LOVEModel.shareModel.lastConversationId || !LOVEModel.shareModel.lastConversation) {
                 [Log info:NSStringFromClass(self.class) message:@"没有上一局游戏"];
                 return [RACSignal empty];
