@@ -76,17 +76,6 @@
     //navigationBar
     [self.navigationController.navigationBar setHidden:YES];
     
-    @weakify(self);
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyChangeTargetAccount object:nil] subscribeNext:^(id x) {
-        @strongify(self);
-        [self.viewModel.endExpiredGameCommand execute:nil];
-    }];
-    
-    
-    [self.systemTableView registerNib:[UINib nibWithNibName:NSStringFromClass(LOVEMessageCell.class) bundle:nil] forCellReuseIdentifier:@"messageCell"];
-    self.systemTableView.delegate = self;
-    self.systemTableView.dataSource = self;
-    
     [self setupAirport];
     [self setupSystemTableView];
     [self setupBattleView];
@@ -94,6 +83,9 @@
 }
 
 - (void)setupSystemTableView{
+    [self.systemTableView registerNib:[UINib nibWithNibName:NSStringFromClass(LOVEMessageCell.class) bundle:nil] forCellReuseIdentifier:@"messageCell"];
+    self.systemTableView.delegate = self;
+    self.systemTableView.dataSource = self;
     self.systemTableView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.systemTableView.layer.borderWidth = 1;
     self.systemTableView.layer.cornerRadius = 5;
@@ -153,6 +145,11 @@
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyEnterForeground object:nil] subscribeNext:^(id x) {
         @strongify(self);
         [self resetAnimationView];
+    }];
+    
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kNotificationKeyChangeTargetAccount object:nil] subscribeNext:^(id x) {
+        @strongify(self);
+        [self.viewModel.endExpiredGameCommand execute:nil];
     }];
     
     //editing 状态变化
@@ -257,7 +254,6 @@
     if (IMManager.shareManager.gameMessageList.count > 0) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[IMManager.shareManager.gameMessageList count]-1 inSection:0];
         [self.systemTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:NO];
-//        self.findNewMessageButton.hidden = YES;
     }
 }
 
@@ -281,7 +277,8 @@
     return 28;
 }
 
-#pragma mark - private loginView
+#pragma mark - private game
+//重置自己的战场
 - (void)resetAirport{
     for (NSArray  * lies in self.airportPixels) {
         for (LOVEPixelView * pixel in lies) {
@@ -289,6 +286,7 @@
         }
     }
 }
+//重置对方的战场
 - (void)resetBattlefield{
     for (NSArray  * lies in self.battlefieldPixels) {
         for (LOVEPixelView * pixel in lies) {
@@ -296,25 +294,7 @@
         }
     }
 }
-- (void)updateBattleField{
-    [self resetBattlefield];
-    self.viewModel.targetDestroyCount = 0;
-    for (NSString * pointString in self.viewModel.targetDestroyPoints) {
-        NSInteger targetHang = [[pointString componentsSeparatedByString:@","].firstObject integerValue];
-        NSInteger targetLie = [[pointString componentsSeparatedByString:@","].lastObject integerValue];
-        
-        LOVEPixelView * pixel = self.battlefieldPixels[targetHang][targetLie];
-        NSString * mapString = self.viewModel.targetPlanesMap[targetHang][targetLie];
-        if ([mapString isEqualToString:kPlaneBody]) {
-            pixel.type = kPixelTypeBattlefieldDestoryBody;
-        }else if ([mapString isEqualToString:kPlaneHead]){
-            self.viewModel.targetDestroyCount++;
-            pixel.type = kPixelTypeBattlefieldDestoryHead;
-        }else if ([mapString isEqualToString:kPlaneBlank]){
-            pixel.type = kPixelTypeBattlefieldMiss;
-        }
-    }
-}
+//更新自己的战场
 - (void)updateAirport{
     [self resetAirport];
     self.viewModel.myDestroyCount = 0;
@@ -324,13 +304,24 @@
         
         LOVEPixelView * pixel = self.airportPixels[targetHang][targetLie];
         NSString * mapString = self.viewModel.myPlanesMap[targetHang][targetLie];
-        if ([mapString isEqualToString:kPlaneBody]) {
-            pixel.type = kPixelTypeAirportDestroyBody;
-        }else if ([mapString isEqualToString:kPlaneHead]){
-            self.viewModel.myDestroyCount++;
-            pixel.type = kPixelTypeAirportDestroyHead;
-        }else if ([mapString isEqualToString:kPlaneBlank]){
-            pixel.type = kPixelTypeAirportMiss;
+        if (self.viewModel.myDestroyPoints.lastObject == pointString) {//最后落子
+            if ([mapString isEqualToString:kPlaneBody]) {
+                pixel.type = kPixelTypeAirportLastFireDestroyBody;
+            }else if ([mapString isEqualToString:kPlaneHead]){
+                self.viewModel.myDestroyCount++;
+                pixel.type = kPixelTypeAirportLastFireDestroyHead;
+            }else if ([mapString isEqualToString:kPlaneBlank]){
+                pixel.type = kPixelTypeAirportLastFireMiss;
+            }
+        }else{
+            if ([mapString isEqualToString:kPlaneBody]) {
+                pixel.type = kPixelTypeAirportDestroyBody;
+            }else if ([mapString isEqualToString:kPlaneHead]){
+                self.viewModel.myDestroyCount++;
+                pixel.type = kPixelTypeAirportDestroyHead;
+            }else if ([mapString isEqualToString:kPlaneBlank]){
+                pixel.type = kPixelTypeAirportMiss;
+            }
         }
     }
     
@@ -343,6 +334,39 @@
         [self.airportView insertSubview:plane atIndex:0];
     }
 }
+//更新对方的战场
+- (void)updateBattleField{
+    [self resetBattlefield];
+    self.viewModel.targetDestroyCount = 0;
+    for (NSString * pointString in self.viewModel.targetDestroyPoints) {
+        NSInteger targetHang = [[pointString componentsSeparatedByString:@","].firstObject integerValue];
+        NSInteger targetLie = [[pointString componentsSeparatedByString:@","].lastObject integerValue];
+        
+        LOVEPixelView * pixel = self.battlefieldPixels[targetHang][targetLie];
+        NSString * mapString = self.viewModel.targetPlanesMap[targetHang][targetLie];
+        
+        if (self.viewModel.targetDestroyPoints.lastObject == pointString) {//最后落子
+            if ([mapString isEqualToString:kPlaneBody]) {
+                pixel.type = kPixelTypeBattlefieldLastFireDestoryBody;
+            }else if ([mapString isEqualToString:kPlaneHead]){
+                self.viewModel.targetDestroyCount++;
+                pixel.type = kPixelTypeBattlefieldLastFireDestoryHead;
+            }else if ([mapString isEqualToString:kPlaneBlank]){
+                pixel.type = kPixelTypeBattlefieldLastFireMiss;
+            }
+        }else{
+            if ([mapString isEqualToString:kPlaneBody]) {
+                pixel.type = kPixelTypeBattlefieldDestoryBody;
+            }else if ([mapString isEqualToString:kPlaneHead]){
+                self.viewModel.targetDestroyCount++;
+                pixel.type = kPixelTypeBattlefieldDestoryHead;
+            }else if ([mapString isEqualToString:kPlaneBlank]){
+                pixel.type = kPixelTypeBattlefieldMiss;
+            }
+        }
+    }
+}
+#pragma mark - private loginView
 - (void)_setupLoginView{
     if (![LOVEModel shareModel].conversation) {
         LOVEViewModel * loginViewModel = [[LOVEViewModel alloc] initWithVCName:NSStringFromClass(LOVELViewController.class) withInitType:GULoadVCFromXib];

@@ -11,14 +11,23 @@
 typedef NS_ENUM(NSUInteger, PixelType) {
     kPixelTypeAirportDefault = 1,
     kPixelTypeBattlefieldDefault,
-    
+    //我的战场上的状态
     kPixelTypeAirportDestroyHead,
     kPixelTypeAirportDestroyBody,
     kPixelTypeAirportMiss,
-    
+    //对方战场上的状态
     kPixelTypeBattlefieldDestoryHead,
     kPixelTypeBattlefieldDestoryBody,
     kPixelTypeBattlefieldMiss,
+    //最后落子
+    //我的战场上的状态
+    kPixelTypeAirportLastFireDestroyHead,
+    kPixelTypeAirportLastFireDestroyBody,
+    kPixelTypeAirportLastFireMiss,
+    //对方战场上的状态
+    kPixelTypeBattlefieldLastFireDestoryHead,
+    kPixelTypeBattlefieldLastFireDestoryBody,
+    kPixelTypeBattlefieldLastFireMiss,
 };
 
 @protocol LOVEPixelViewDelegate<NSObject>

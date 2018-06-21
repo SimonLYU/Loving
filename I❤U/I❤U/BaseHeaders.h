@@ -33,7 +33,7 @@ lipo -create HyphenateLite_armv7 HyphenateLite_arm64 -output HyphenateLite
 mv HyphenateLite HyphenateLite.framework/
  */
 
-//#define WIFE_VERSION //给老婆的版本要打开注释
+#define WIFE_VERSION //给老婆的版本要打开注释
 
 #define pixelWH (UIScreen.mainScreen.bounds.size.width * 0.1)
 #pragma mark - NSUserDefaults
@@ -42,17 +42,18 @@ static NSString * const kLastLoginAccount        = @"lastLoginAccount";
 static NSString * const kLastLoginPassword       = @"lastLoginPassword";
 
 #pragma mark - NSNotification
+//双击和捏合事件
 static NSString * const kCoverScaleChangeName    = @"coverScaleChange";
 static NSString * const kCoverDoubleTapped       = @"coverDoubleTapped";
-
+//前后台事件
 static NSString * const kNotificationKeyEneterBackground    = @"notificationKeyEneterBackground";
 static NSString * const kNotificationKeyEnterForeground     = @"notificationKeyEnterForeground";
-
+//游戏事件
 static NSString * const kNotificationKeyFire    = @"notificationKeyFire";
 static NSString * const kNotificationKeyStart   = @"notificationKeyStart";
 static NSString * const kNotificationKeyEnd     = @"notificationKeyEnd";
 static NSString * const kNotificationKeyReset   = @"notificationKeyReset";
-
+//登录事件
 static NSString * const kNotificationLoginSuccessKey            = @"loginSuccessKey";
 static NSString * const kNotificationKeyChangeTargetAccount     = @"notificationKeyChangeTargetAccount";
 
@@ -72,8 +73,8 @@ static NSInteger airportLength = 10;
 static NSInteger airportHeight = 12;
 
 #pragma mark - Love Account
-static NSString * wifeAccount    = @"yyr";
-static NSString * husbandAccount = @"lxm";
+static NSString * const wifeAccount    = @"yyr";
+static NSString * const husbandAccount = @"lxm";
 
 //注册账号的正则表达式:数字或小写字母组成的3~16位字符串(不可出现大写字母,环信的conversationID不识别大写字母)
 #define kUserAccountRegiex @"^[0-9a-z]{3,16}$"

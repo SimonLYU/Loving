@@ -381,15 +381,20 @@
 }
 
 #pragma mark - private
-//清空飞机场和战场上的所有攻击标记
+//触发外部监听,清空飞机场和战场上的所有攻击标记
 - (void)resetGame{
     self.targetDestroyPoints = nil;
     self.myDestroyPoints = nil;
 }
+/**
+ * 将飞机位置使用0,1,2标记成二维数组和字符串
+ * 二维数组在游戏中主要用于记录飞机位置并回馈击中反馈
+ * 字符串用户发送给另一位玩家自己的飞机坐标,为对方回馈击中反馈
+ */
 - (NSString *)mappingPlanes{
-    NSString * blank = @"0";
-    NSString * body  = @"1";
-    NSString * head  = @"2";
+    NSString * blank = kPlaneBlank;
+    NSString * body  = kPlaneBody;
+    NSString * head  = kPlaneHead;
     //数量检测
     if (self.planeList.count != 3) {
         [UIUtil showHint:@"飞机数量不正确"];
