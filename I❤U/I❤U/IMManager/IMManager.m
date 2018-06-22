@@ -37,6 +37,27 @@
     return _shareManager;
 }
 
+//根据message计算cell高度
++ (CGFloat)calculateCellHeight:(EMMessage *)message{
+    NSDictionary *attributes = @{
+                                 NSFontAttributeName:IM_SYSTEM_CONTENT_TEXT_FONT,
+                                 };
+    
+    NSAttributedString * attributedMessageContent = [[NSAttributedString alloc] initWithString:((EMTextMessageBody *)(message.body)).text attributes:attributes];
+    CGFloat maxWidth = 0.f;
+    if ([message.from isEqualToString:[[EMClient sharedClient] currentUsername]]) {
+        maxWidth = [UIScreen mainScreen].bounds.size.width - 25 - 5;
+    }else{
+        maxWidth = [UIScreen mainScreen].bounds.size.width - 5 - 5;
+    }
+    CGRect contentRect = [attributedMessageContent boundingRectWithSize:CGSizeMake(maxWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
+    CGSize contentSize = CGRectIntegral(contentRect).size;
+    CGFloat cellHeight = contentSize.height;
+    cellHeight += 10;//上下边距
+    return cellHeight;
+}
+
+//接收到新消息时的处理方法
 - (RACCommand *)receiveNewMessageCommand{
     if (!_receiveNewMessageCommand) {
         _receiveNewMessageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
@@ -63,13 +84,13 @@
                 if (msgBody.type == EMMessageBodyTypeText) {
                     EMTextMessageBody *textBody = (EMTextMessageBody *)msgBody;
                     if ([textBody.text hasPrefix:kFireScheme]){//攻击指定地点
-                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyFire object:[self insertCellHeight:@[message]].lastObject];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyFire object:[self getLoveMessagesFromEmmessages:@[message]].lastObject];
                     }else if ([textBody.text hasPrefix:kStartScheme]){//一方准备游戏
-                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyStart object:[self insertCellHeight:@[message]].lastObject];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyStart object:[self getLoveMessagesFromEmmessages:@[message]].lastObject];
                     }else if ([textBody.text hasPrefix:kEndScheme]){//一方结束游戏
-                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyEnd object:[self insertCellHeight:@[message]].lastObject];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyEnd object:[self getLoveMessagesFromEmmessages:@[message]].lastObject];
                     }else if ([textBody.text hasPrefix:kResetScheme]){//一方完全退出游戏
-                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyReset object:[self insertCellHeight:@[message]].lastObject];
+                        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationKeyReset object:[self getLoveMessagesFromEmmessages:@[message]].lastObject];
                     }
                 }
                 
@@ -98,12 +119,12 @@
                 NSMutableArray * commands = [NSMutableArray arrayWithArray:self.gameMessageList];
                 //封装一层message
                 if (newMessageWithCommand.count > 0) {
-                    NSArray * newLoveMessages = [self insertCellHeight:newMessageWithCommand];
+                    NSArray * newLoveMessages = [self getLoveMessagesFromEmmessages:newMessageWithCommand];
                     [messages addObjectsFromArray:newLoveMessages];
                     self.messageList = messages;
                 }
                 if (newCommand.count > 0) {
-                    NSArray * newLoveCommand = [self insertCellHeight:newCommand];
+                    NSArray * newLoveCommand = [self getLoveMessagesFromEmmessages:newCommand];
                     [commands addObjectsFromArray:newLoveCommand];
                     self.gameMessageList = commands;
                 }
@@ -116,6 +137,7 @@
     return _receiveNewMessageCommand;
 }
 
+//拉取历史消息
 - (RACCommand *)fetchServiceMessageListCommand{
     if (!_fetchServiceMessageListCommand) {
         _fetchServiceMessageListCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
@@ -156,8 +178,8 @@
                                     }
                                 }
                                 //封装一层message
-                                NSArray * newLoveMessages = [self insertCellHeight:aMessagesWithoutCommand];
-                                NSArray * newCommands = [self insertCellHeight:aCommands];
+                                NSArray * newLoveMessages = [self getLoveMessagesFromEmmessages:aMessagesWithoutCommand];
+                                NSArray * newCommands = [self getLoveMessagesFromEmmessages:aCommands];
                                 NSMutableArray * messages = [NSMutableArray arrayWithArray:newLoveMessages];
                                 NSMutableArray * commands = [NSMutableArray arrayWithArray:newCommands];
                                 //service丢失消息
@@ -183,19 +205,19 @@
                                 }
                                 //IM:游戏初始化时,拉取历史消息,不需要更新IM,否则会重复出现两条相同的IM消息
                                 if (shouldUpdateMessagelist) {
-                                    NSArray * newServiceLoveMessages = [self insertCellHeight:aResultListWithoutCommand];
+                                    NSArray * newServiceLoveMessages = [self getLoveMessagesFromEmmessages:aResultListWithoutCommand];
                                     [messages addObjectsFromArray:newServiceLoveMessages];
                                     [messages addObjectsFromArray:self.messageList];
                                     self.messageList = messages;
                                 }
                                 
                                 //游戏:
-                                NSArray * newServiceCommands = [self insertCellHeight:aResultCommands];
+                                NSArray * newServiceCommands = [self getLoveMessagesFromEmmessages:aResultCommands];
                                 [commands addObjectsFromArray:newServiceCommands];
                                 //插入一个提示
                                 EMMessage *message = [[EMMessage alloc] initWithConversationID:[LOVEModel shareModel].conversationId from:[LOVEModel shareModel].toAccount to:[LOVEModel shareModel].fromAccount body:[[EMTextMessageBody alloc] initWithText:@">>以上为历史消息<<"] ext:nil];
                                 message.chatType = EMChatTypeChat;
-                                NSArray * aTipMessage = [self insertCellHeight:@[message]];
+                                NSArray * aTipMessage = [self getLoveMessagesFromEmmessages:@[message]];
                                 [commands addObjectsFromArray:aTipMessage];
                                 //最新新消息
                                 [commands addObjectsFromArray:self.gameMessageList];
@@ -215,17 +237,18 @@
 }
 
 #pragma mark - fucntions
+//在游戏界面生成一条不插入DB的系统提示消息
 - (void)genLocalGameMessage:(NSString *)text{
     LOVEMessage * lastMessage = self.gameMessageList.lastObject;
     //插入一个提示
     EMMessage *message = [[EMMessage alloc] initWithConversationID:[LOVEModel shareModel].conversationId from:lastMessage.emMessage.from to:lastMessage.emMessage.to body:[[EMTextMessageBody alloc] initWithText:[NSString stringWithFormat:@"%@%@",kSysScheme,text]] ext:nil];
     message.chatType = EMChatTypeChat;
-    NSArray * aTipMessage = [self insertCellHeight:@[message]];
+    NSArray * aTipMessage = [self getLoveMessagesFromEmmessages:@[message]];
     NSMutableArray * newCommandlist = [NSMutableArray arrayWithArray:self.gameMessageList];
     [newCommandlist addObjectsFromArray:aTipMessage];
     self.gameMessageList = newCommandlist;
 }
-
+//根据account获取本地hardcode昵称
 - (NSString *)nickForAccount:(NSString *)account{
     NSString * nick = self.nickAccountMap[account];
     if (nick) {
@@ -234,25 +257,8 @@
         return account;
     }
 }
-+ (CGFloat)calculateCellHeight:(EMMessage *)message{
-    NSDictionary *attributes = @{
-                                 NSFontAttributeName:IM_SYSTEM_CONTENT_TEXT_FONT,
-                                 };
-    
-    NSAttributedString * attributedMessageContent = [[NSAttributedString alloc] initWithString:((EMTextMessageBody *)(message.body)).text attributes:attributes];
-    CGFloat maxWidth = 0.f;
-    if ([message.from isEqualToString:[[EMClient sharedClient] currentUsername]]) {
-        maxWidth = [UIScreen mainScreen].bounds.size.width - 25 - 5;
-    }else{
-        maxWidth = [UIScreen mainScreen].bounds.size.width - 5 - 5;
-    }
-    CGRect contentRect = [attributedMessageContent boundingRectWithSize:CGSizeMake(maxWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
-    CGSize contentSize = CGRectIntegral(contentRect).size;
-    CGFloat cellHeight = contentSize.height;
-    cellHeight += 10;//上下边距
-    return cellHeight;
-}
 
+//检测字符串是否符合kUserAccountRegiex正则表达式
 - (BOOL)checkAccount:(NSString *)account
 {
     NSPredicate *loginPwdPre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", kUserAccountRegiex];
@@ -261,7 +267,8 @@
 }
 
 #pragma mark - private
-- (NSArray *)insertCellHeight:(NSArray *)messageList{
+//在EMMessage上封装一层LOVEMessage
+- (NSArray *)getLoveMessagesFromEmmessages:(NSArray *)messageList{
     NSMutableArray * newMessageList = [NSMutableArray array];
     for (EMMessage *message in messageList) {
         CGFloat cellHeight = [self.class calculateCellHeight:message];
@@ -271,8 +278,8 @@
     return newMessageList;
 }
 
-#pragma mark - reveive message
-#pragma mark - EMClientDelegate
+#pragma mark - EMClientDelegate reveive message
+//收到消息的回调
 - (void)messagesDidReceive:(NSArray *)aMessages{
     [self.receiveNewMessageCommand execute:aMessages];
 }

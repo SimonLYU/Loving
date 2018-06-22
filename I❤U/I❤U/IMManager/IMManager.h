@@ -20,12 +20,24 @@
 
 + (IMManager *)shareManager;
 
+/**
+ * 根据message计算cell高度
+ */
 + (CGFloat)calculateCellHeight:(EMMessage *)message;
 
+/**
+ * 在游戏界面生成一条不插入DB的系统提示消息
+ */
 - (void)genLocalGameMessage:(NSString *)text;
 
+/**
+ * 根据account获取hardcode昵称
+ */
 - (NSString *)nickForAccount:(NSString *)account;
 
+/**
+ * 查询account是否符合正则表达式kUserAccountRegiex
+ */
 - (BOOL)checkAccount:(NSString *)account;
 
 @end
