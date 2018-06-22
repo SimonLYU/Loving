@@ -3072,6 +3072,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/plane-version-info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3101,6 +3105,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/plane-version-info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -3236,6 +3244,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"WIFE_VERSION=1",
+				);
 				INFOPLIST_FILE = "I❤U/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3265,6 +3278,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"WIFE_VERSION=1",
 				);
 				INFOPLIST_FILE = "I❤U/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
