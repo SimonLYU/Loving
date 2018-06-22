@@ -232,6 +232,258 @@
 		F45BD9C0207365E200100E37 /* LOTAnimationView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD9BF207365E200100E37 /* LOTAnimationView+Extension.m */; };
 		F45BDDA92073741500100E37 /* LOTLocalResource in Resources */ = {isa = PBXBuildFile; fileRef = F45BDDA82073741500100E37 /* LOTLocalResource */; };
 		F46CEF3420CF7178006CB1BA /* IMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46CEF3320CF7178006CB1BA /* IMManager.m */; };
+		F49EACDE20DCF1F500FAF170 /* MWGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1A320C94086002EFB87 /* MWGridCell.m */; };
+		F49EACDF20DCF1F500FAF170 /* MWZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1B120C94086002EFB87 /* MWZoomingScrollView.m */; };
+		F49EACE020DCF1F500FAF170 /* EaseMessageTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D23E20C94086002EFB87 /* EaseMessageTimeCell.m */; };
+		F49EACE120DCF1F500FAF170 /* EaseUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D23420C94086002EFB87 /* EaseUserCell.m */; };
+		F49EACE220DCF1F500FAF170 /* NSValue+Compat.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD956207361F900100E37 /* NSValue+Compat.m */; };
+		F49EACE320DCF1F500FAF170 /* UIImage+MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1B320C94086002EFB87 /* UIImage+MWPhotoBrowser.m */; };
+		F49EACE420DCF1F500FAF170 /* LOTMask.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD923207361F900100E37 /* LOTMask.m */; };
+		F49EACE520DCF1F500FAF170 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D20A20C94086002EFB87 /* NSDate+Category.m */; };
+		F49EACE620DCF1F500FAF170 /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D14F20C94086002EFB87 /* EMAudioRecorderUtil.m */; };
+		F49EACE720DCF1F500FAF170 /* EaseBubbleView+Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24320C94086002EFB87 /* EaseBubbleView+Gif.m */; };
+		F49EACE820DCF1F500FAF170 /* PSTCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1C120C94086002EFB87 /* PSTCollectionViewController.m */; };
+		F49EACE920DCF1F500FAF170 /* EaseMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D22A20C94086002EFB87 /* EaseMessageViewController.m */; };
+		F49EACEA20DCF1F500FAF170 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1DF20C94086002EFB87 /* SDWebImageDecoder.m */; };
+		F49EACEB20DCF1F500FAF170 /* LOTKeypath.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD960207361F900100E37 /* LOTKeypath.m */; };
+		F49EACEC20DCF1F500FAF170 /* LOTInterpolatorCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD963207361F900100E37 /* LOTInterpolatorCallback.m */; };
+		F49EACED20DCF1F500FAF170 /* LOVEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDD120CE159C002D6A87 /* LOVEModel.m */; };
+		F49EACEE20DCF1F500FAF170 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF6620C9175C002EFB87 /* BaseNavigationController.m */; };
+		F49EACEF20DCF1F500FAF170 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1F020C94086002EFB87 /* UIImage+WebP.m */; };
+		F49EACF020DCF1F500FAF170 /* LOTCacheProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD961207361F900100E37 /* LOTCacheProvider.m */; };
+		F49EACF120DCF1F500FAF170 /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D18420C94086002EFB87 /* MJRefreshAutoStateFooter.m */; };
+		F49EACF220DCF1F500FAF170 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7CD35204FF7F500676D18 /* main.m */; };
+		F49EACF320DCF1F500FAF170 /* LOTShapeTrimPath.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD92C207361F900100E37 /* LOTShapeTrimPath.m */; };
+		F49EACF420DCF1F500FAF170 /* EaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D23C20C94086002EFB87 /* EaseMessageCell.m */; };
+		F49EACF520DCF1F500FAF170 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D19620C94086002EFB87 /* MJRefreshConst.m */; };
+		F49EACF620DCF1F500FAF170 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8E42073610700100E37 /* MASViewConstraint.m */; };
+		F49EACF720DCF1F500FAF170 /* LOTPathAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD90D207361F900100E37 /* LOTPathAnimator.m */; };
+		F49EACF820DCF1F500FAF170 /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1D420C94086002EFB87 /* PSTGridLayoutSection.m */; };
+		F49EACF920DCF1F500FAF170 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D14320C94086002EFB87 /* EaseUI.m */; };
+		F49EACFA20DCF1F500FAF170 /* UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD953207361F900100E37 /* UIColor.m */; };
+		F49EACFB20DCF1F500FAF170 /* PSTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1BE20C94086002EFB87 /* PSTCollectionViewCell.m */; };
+		F49EACFC20DCF1F500FAF170 /* LOTArrayInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD909207361F900100E37 /* LOTArrayInterpolator.m */; };
+		F49EACFD20DCF1F500FAF170 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8DE2073610700100E37 /* NSArray+MASAdditions.m */; };
+		F49EACFE20DCF1F500FAF170 /* LOVEPlaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDDB20CE45EF002D6A87 /* LOVEPlaneView.m */; };
+		F49EACFF20DCF1F500FAF170 /* LOTLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD924207361F900100E37 /* LOTLayer.m */; };
+		F49EAD0020DCF1F500FAF170 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D18E20C94086002EFB87 /* MJRefreshGifHeader.m */; };
+		F49EAD0120DCF1F500FAF170 /* PSTGridLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1D020C94086002EFB87 /* PSTGridLayoutItem.m */; };
+		F49EAD0220DCF1F500FAF170 /* EaseBubbleView+File.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24120C94086002EFB87 /* EaseBubbleView+File.m */; };
+		F49EAD0320DCF1F500FAF170 /* EaseMessageReadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D21920C94086002EFB87 /* EaseMessageReadManager.m */; };
+		F49EAD0420DCF1F500FAF170 /* LOTGradientFillRender.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD919207361F900100E37 /* LOTGradientFillRender.m */; };
+		F49EAD0520DCF1F500FAF170 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D17920C94086002EFB87 /* MJRefreshFooter.m */; };
+		F49EAD0620DCF1F500FAF170 /* EaseConversationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1FD20C94086002EFB87 /* EaseConversationModel.m */; };
+		F49EAD0720DCF1F500FAF170 /* LOTColorInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8FB207361F900100E37 /* LOTColorInterpolator.m */; };
+		F49EAD0820DCF1F500FAF170 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1BA20C94086002EFB87 /* NSIndexPath+PSTCollectionViewAdditions.m */; };
+		F49EAD0920DCF1F500FAF170 /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D18B20C94086002EFB87 /* MJRefreshBackStateFooter.m */; };
+		F49EAD0A20DCF1F500FAF170 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D19220C94086002EFB87 /* MJRefreshStateHeader.m */; };
+		F49EAD0B20DCF1F500FAF170 /* LOTAnimatedSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD964207361F900100E37 /* LOTAnimatedSwitch.m */; };
+		F49EAD0C20DCF1F500FAF170 /* MWGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1A520C94086002EFB87 /* MWGridViewController.m */; };
+		F49EAD0D20DCF1F500FAF170 /* EaseBubbleView+Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24720C94086002EFB87 /* EaseBubbleView+Location.m */; };
+		F49EAD0E20DCF1F500FAF170 /* LOTRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD94A207361F900100E37 /* LOTRadialGradientLayer.m */; };
+		F49EAD0F20DCF1F500FAF170 /* LOTPointInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD906207361F900100E37 /* LOTPointInterpolator.m */; };
+		F49EAD1020DCF1F500FAF170 /* LOTShapeRepeater.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD935207361F900100E37 /* LOTShapeRepeater.m */; };
+		F49EAD1120DCF1F500FAF170 /* FixFopen.c in Sources */ = {isa = PBXBuildFile; fileRef = F440D22320C94086002EFB87 /* FixFopen.c */; };
+		F49EAD1220DCF1F500FAF170 /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D18920C94086002EFB87 /* MJRefreshBackNormalFooter.m */; };
+		F49EAD1320DCF1F500FAF170 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8E52073610700100E37 /* MASViewAttribute.m */; };
+		F49EAD1420DCF1F500FAF170 /* DeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98620D2758600E86A65 /* DeviceUtil.m */; };
+		F49EAD1520DCF1F500FAF170 /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1AD20C94086002EFB87 /* MWTapDetectingImageView.m */; };
+		F49EAD1620DCF1F500FAF170 /* LOTValueInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD907207361F900100E37 /* LOTValueInterpolator.m */; };
+		F49EAD1720DCF1F500FAF170 /* EMCDDeviceManager+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D15720C94086002EFB87 /* EMCDDeviceManager+Remind.m */; };
+		F49EAD1820DCF1F500FAF170 /* LOTRoundedRectAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD915207361F900100E37 /* LOTRoundedRectAnimator.m */; };
+		F49EAD1920DCF1F500FAF170 /* LOTBlockCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD95C207361F900100E37 /* LOTBlockCallback.m */; };
+		F49EAD1A20DCF1F500FAF170 /* LOTAnimatorNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD90B207361F900100E37 /* LOTAnimatorNode.m */; };
+		F49EAD1B20DCF1F500FAF170 /* FunctionTwoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF9D20C93CCC002EFB87 /* FunctionTwoViewModel.m */; };
+		F49EAD1C20DCF1F500FAF170 /* PSTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1BC20C94086002EFB87 /* PSTCollectionView.m */; };
+		F49EAD1D20DCF1F500FAF170 /* LOTCircleAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD911207361F900100E37 /* LOTCircleAnimator.m */; };
+		F49EAD1E20DCF1F500FAF170 /* LOTKeyframe.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD966207361F900100E37 /* LOTKeyframe.m */; };
+		F49EAD1F20DCF1F500FAF170 /* LOTShapeCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD93C207361F900100E37 /* LOTShapeCircle.m */; };
+		F49EAD2020DCF1F500FAF170 /* LOTRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8F4207361F900100E37 /* LOTRenderNode.m */; };
+		F49EAD2120DCF1F500FAF170 /* FunctionThreeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDD720CE1D0E002D6A87 /* FunctionThreeViewModel.m */; };
+		F49EAD2220DCF1F500FAF170 /* LOTLayerGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD92A207361F900100E37 /* LOTLayerGroup.m */; };
+		F49EAD2320DCF1F500FAF170 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98120D262A100E86A65 /* LoginViewModel.m */; };
+		F49EAD2420DCF1F500FAF170 /* PSTCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1C520C94086002EFB87 /* PSTCollectionViewFlowLayout.m */; };
+		F49EAD2520DCF1F500FAF170 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1DB20C94086002EFB87 /* SDImageCache.m */; };
+		F49EAD2620DCF1F500FAF170 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1EA20C94086002EFB87 /* UIButton+WebCache.m */; };
+		F49EAD2720DCF1F500FAF170 /* EaseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D22820C94086002EFB87 /* EaseLocationViewController.m */; };
+		F49EAD2820DCF1F500FAF170 /* LOTShapeStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD943207361F900100E37 /* LOTShapeStroke.m */; };
+		F49EAD2920DCF1F500FAF170 /* UIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD950207361F900100E37 /* UIBezierPath.m */; };
+		F49EAD2A20DCF1F500FAF170 /* LOVEGameAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B4BC3320D1005900B86E35 /* LOVEGameAudioManager.m */; };
+		F49EAD2B20DCF1F500FAF170 /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D20E20C94086002EFB87 /* NSString+Valid.m */; };
+		F49EAD2C20DCF1F500FAF170 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1E520C94086002EFB87 /* SDWebImageManager.m */; };
+		F49EAD2D20DCF1F500FAF170 /* LOVEMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D701BC20CA201500172456 /* LOVEMessageCell.m */; };
+		F49EAD2E20DCF1F500FAF170 /* LOTAssetGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD925207361F900100E37 /* LOTAssetGroup.m */; };
+		F49EAD2F20DCF1F500FAF170 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D18720C94086002EFB87 /* MJRefreshBackGifFooter.m */; };
+		F49EAD3020DCF1F500FAF170 /* EaseBaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D23820C94086002EFB87 /* EaseBaseMessageCell.m */; };
+		F49EAD3120DCF1F500FAF170 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8E22073610700100E37 /* MASConstraint.m */; };
+		F49EAD3220DCF1F500FAF170 /* EMCDDeviceManager+Media.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D15120C94086002EFB87 /* EMCDDeviceManager+Media.m */; };
+		F49EAD3320DCF1F500FAF170 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1E820C94086002EFB87 /* SDWebImagePrefetcher.m */; };
+		F49EAD3420DCF1F500FAF170 /* LOTShapeTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD941207361F900100E37 /* LOTShapeTransform.m */; };
+		F49EAD3520DCF1F500FAF170 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = F440D15E20C94086002EFB87 /* amrFileCodec.mm */; };
+		F49EAD3620DCF1F500FAF170 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98F20D275BE00E86A65 /* SSKeychainQuery.m */; };
+		F49EAD3720DCF1F500FAF170 /* EaseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D25620C94086002EFB87 /* EaseImageView.m */; };
+		F49EAD3820DCF1F500FAF170 /* PSTCollectionViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1C320C94086002EFB87 /* PSTCollectionViewData.m */; };
+		F49EAD3920DCF1F500FAF170 /* LOTLayerContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD96B207361F900100E37 /* LOTLayerContainer.m */; };
+		F49EAD3A20DCF1F500FAF170 /* FunctionOneViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF7320C91795002EFB87 /* FunctionOneViewModel.m */; };
+		F49EAD3B20DCF1F500FAF170 /* MWCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1A020C94086002EFB87 /* MWCaptionView.m */; };
+		F49EAD3C20DCF1F500FAF170 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D19820C94086002EFB87 /* UIScrollView+MJExtension.m */; };
+		F49EAD3D20DCF1F500FAF170 /* EaseRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D22C20C94086002EFB87 /* EaseRefreshTableViewController.m */; };
+		F49EAD3E20DCF1F500FAF170 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1F220C94086002EFB87 /* UIImageView+HighlightedWebCache.m */; };
+		F49EAD3F20DCF1F500FAF170 /* LOVEPixelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDDE20CE6F64002D6A87 /* LOVEPixelView.m */; };
+		F49EAD4020DCF1F500FAF170 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7CD3D2050003C00676D18 /* MainViewController.m */; };
+		F49EAD4120DCF1F500FAF170 /* PSTCollectionViewItemKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1C720C94086002EFB87 /* PSTCollectionViewItemKey.m */; };
+		F49EAD4220DCF1F500FAF170 /* LOTPolystarAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD90E207361F900100E37 /* LOTPolystarAnimator.m */; };
+		F49EAD4320DCF1F500FAF170 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD94D207361F900100E37 /* UIColor+Expanded.m */; };
+		F49EAD4420DCF1F500FAF170 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1D920C94086002EFB87 /* NSData+ImageContentType.m */; };
+		F49EAD4520DCF1F500FAF170 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF7520C91828002EFB87 /* BaseViewModel.m */; };
+		F49EAD4620DCF1F500FAF170 /* LOTNumberInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD90A207361F900100E37 /* LOTNumberInterpolator.m */; };
+		F49EAD4720DCF1F500FAF170 /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF8A20C92EB3002EFB87 /* StringUtil.m */; };
+		F49EAD4820DCF1F500FAF170 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1E320C94086002EFB87 /* SDWebImageDownloaderOperation.m */; };
+		F49EAD4920DCF1F500FAF170 /* MWTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1AF20C94086002EFB87 /* MWTapDetectingView.m */; };
+		F49EAD4A20DCF1F500FAF170 /* EaseEmotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D22220C94086002EFB87 /* EaseEmotionManager.m */; };
+		F49EAD4B20DCF1F500FAF170 /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F440D16220C94086002EFB87 /* EMVoiceConverter.mm */; };
+		F49EAD4C20DCF1F500FAF170 /* TTTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF8320C92E5B002EFB87 /* TTTipView.m */; };
+		F49EAD4D20DCF1F500FAF170 /* FDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A99820D2762900E86A65 /* FDAlertView.m */; };
+		F49EAD4E20DCF1F500FAF170 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7CD74205136DA00676D18 /* CoverView.m */; };
+		F49EAD4F20DCF1F500FAF170 /* LOTPathInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8FC207361F900100E37 /* LOTPathInterpolator.m */; };
+		F49EAD5020DCF1F500FAF170 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = F440D16020C94086002EFB87 /* wav.mm */; };
+		F49EAD5120DCF1F500FAF170 /* EMCDDeviceManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D15A20C94086002EFB87 /* EMCDDeviceManagerBase.m */; };
+		F49EAD5220DCF1F500FAF170 /* IMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F46CEF3320CF7178006CB1BA /* IMManager.m */; };
+		F49EAD5320DCF1F500FAF170 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1EC20C94086002EFB87 /* UIImage+GIF.m */; };
+		F49EAD5420DCF1F500FAF170 /* EaseSDKHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1FA20C94086002EFB87 /* EaseSDKHelper.m */; };
+		F49EAD5520DCF1F500FAF170 /* LOTShapeRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD937207361F900100E37 /* LOTShapeRectangle.m */; };
+		F49EAD5620DCF1F500FAF170 /* LOVEMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D701C120CA588E00172456 /* LOVEMessage.m */; };
+		F49EAD5720DCF1F500FAF170 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1F420C94086002EFB87 /* UIImageView+WebCache.m */; };
+		F49EAD5820DCF1F500FAF170 /* EaseBubbleView+Text.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24920C94086002EFB87 /* EaseBubbleView+Text.m */; };
+		F49EAD5920DCF1F500FAF170 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F4546499205147B800832537 /* Log.m */; };
+		F49EAD5A20DCF1F500FAF170 /* EaseEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D21C20C94086002EFB87 /* EaseEmoji.m */; };
+		F49EAD5B20DCF1F500FAF170 /* FunctionFourHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CE2420C9094F002EFB87 /* FunctionFourHomeViewController.m */; };
+		F49EAD5C20DCF1F500FAF170 /* EaseUsersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D22E20C94086002EFB87 /* EaseUsersListViewController.m */; };
+		F49EAD5D20DCF1F500FAF170 /* EaseRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D26320C94086002EFB87 /* EaseRecordView.m */; };
+		F49EAD5E20DCF1F500FAF170 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D17B20C94086002EFB87 /* MJRefreshHeader.m */; };
+		F49EAD5F20DCF1F500FAF170 /* EaseChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D21420C94086002EFB87 /* EaseChineseToPinyin.m */; };
+		F49EAD6020DCF1F500FAF170 /* SimulateIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A99420D275DC00E86A65 /* SimulateIDFA.m */; };
+		F49EAD6120DCF1F500FAF170 /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF7C20C92DCD002EFB87 /* UIUtil.m */; };
+		F49EAD6220DCF1F500FAF170 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D19020C94086002EFB87 /* MJRefreshNormalHeader.m */; };
+		F49EAD6320DCF1F500FAF170 /* LOTAnimationView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD9BF207365E200100E37 /* LOTAnimationView+Extension.m */; };
+		F49EAD6420DCF1F500FAF170 /* LOTStrokeRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD91E207361F900100E37 /* LOTStrokeRenderer.m */; };
+		F49EAD6520DCF1F500FAF170 /* LOTRenderGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD918207361F900100E37 /* LOTRenderGroup.m */; };
+		F49EAD6620DCF1F500FAF170 /* PSTGridLayoutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1D220C94086002EFB87 /* PSTGridLayoutRow.m */; };
+		F49EAD6720DCF1F500FAF170 /* SystemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF8820C92EB3002EFB87 /* SystemUtil.m */; };
+		F49EAD6820DCF1F500FAF170 /* FunctionOneHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CE3C20C909B0002EFB87 /* FunctionOneHomeViewController.m */; };
+		F49EAD6920DCF1F500FAF170 /* LOTRepeaterRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD921207361F900100E37 /* LOTRepeaterRenderer.m */; };
+		F49EAD6A20DCF1F500FAF170 /* FunctionTwoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CE3220C9099F002EFB87 /* FunctionTwoHomeViewController.m */; };
+		F49EAD6B20DCF1F500FAF170 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8DF2073610700100E37 /* View+MASAdditions.m */; };
+		F49EAD6C20DCF1F500FAF170 /* DACircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1B720C94086002EFB87 /* DACircularProgressView.m */; };
+		F49EAD6D20DCF1F500FAF170 /* EaseCustomMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D23A20C94086002EFB87 /* EaseCustomMessageCell.m */; };
+		F49EAD6E20DCF1F500FAF170 /* LOTAnimationCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD959207361F900100E37 /* LOTAnimationCache.m */; };
+		F49EAD6F20DCF1F500FAF170 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D17520C94086002EFB87 /* MJRefreshBackFooter.m */; };
+		F49EAD7020DCF1F500FAF170 /* MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1A920C94086002EFB87 /* MWPhotoBrowser.m */; };
+		F49EAD7120DCF1F500FAF170 /* EaseUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D20120C94086002EFB87 /* EaseUserModel.m */; };
+		F49EAD7220DCF1F500FAF170 /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D14D20C94086002EFB87 /* EMAudioPlayerUtil.m */; };
+		F49EAD7320DCF1F500FAF170 /* EaseConvertToCommonEmoticonsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D21620C94086002EFB87 /* EaseConvertToCommonEmoticonsHelper.m */; };
+		F49EAD7420DCF1F500FAF170 /* CALayer+Compat.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD957207361F900100E37 /* CALayer+Compat.m */; };
+		F49EAD7520DCF1F500FAF170 /* MWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1A720C94086002EFB87 /* MWPhoto.m */; };
+		F49EAD7620DCF1F500FAF170 /* PSTGridLayoutInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1CE20C94086002EFB87 /* PSTGridLayoutInfo.m */; };
+		F49EAD7720DCF1F500FAF170 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1DD20C94086002EFB87 /* SDWebImageCompat.m */; };
+		F49EAD7820DCF1F500FAF170 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A97C20D2629000E86A65 /* LoginViewController.m */; };
+		F49EAD7920DCF1F500FAF170 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1EE20C94086002EFB87 /* UIImage+MultiFormat.m */; };
+		F49EAD7A20DCF1F500FAF170 /* LOTCompositionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD96F207361F900100E37 /* LOTCompositionContainer.m */; };
+		F49EAD7B20DCF1F500FAF170 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D17720C94086002EFB87 /* MJRefreshComponent.m */; };
+		F49EAD7C20DCF1F500FAF170 /* EaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D23020C94086002EFB87 /* EaseViewController.m */; };
+		F49EAD7D20DCF1F500FAF170 /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D18020C94086002EFB87 /* MJRefreshAutoGifFooter.m */; };
+		F49EAD7E20DCF1F500FAF170 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8DC2073610700100E37 /* MASConstraintMaker.m */; };
+		F49EAD7F20DCF1F500FAF170 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF6A20C9175C002EFB87 /* BaseViewController.m */; };
+		F49EAD8020DCF1F500FAF170 /* HttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7AC3E1206235F800592C74 /* HttpUtil.m */; };
+		F49EAD8120DCF1F500FAF170 /* LOTAnimatedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD962207361F900100E37 /* LOTAnimatedControl.m */; };
+		F49EAD8220DCF1F500FAF170 /* EaseChatToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D25420C94086002EFB87 /* EaseChatToolbarItem.m */; };
+		F49EAD8320DCF1F500FAF170 /* ChallangeAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A9ED20D27EC600E86A65 /* ChallangeAlertView.m */; };
+		F49EAD8420DCF1F500FAF170 /* LOTShapeFill.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD940207361F900100E37 /* LOTShapeFill.m */; };
+		F49EAD8520DCF1F500FAF170 /* EaseBubbleView+Voice.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24D20C94086002EFB87 /* EaseBubbleView+Voice.m */; };
+		F49EAD8620DCF1F500FAF170 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1F620C94086002EFB87 /* UIView+WebCacheOperation.m */; };
+		F49EAD8720DCF1F500FAF170 /* LOTBezierData.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD967207361F900100E37 /* LOTBezierData.m */; };
+		F49EAD8820DCF1F500FAF170 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D19C20C94086002EFB87 /* UIView+MJExtension.m */; };
+		F49EAD8920DCF1F500FAF170 /* EaseEmojiEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D21E20C94086002EFB87 /* EaseEmojiEmoticons.m */; };
+		F49EAD8A20DCF1F500FAF170 /* EaseConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D26620C94086002EFB87 /* EaseConversationCell.m */; };
+		F49EAD8B20DCF1F500FAF170 /* LOTAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD95D207361F900100E37 /* LOTAnimationView.m */; };
+		F49EAD8C20DCF1F500FAF170 /* LOTSizeInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD904207361F900100E37 /* LOTSizeInterpolator.m */; };
+		F49EAD8D20DCF1F500FAF170 /* CGGeometry+LOTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD947207361F900100E37 /* CGGeometry+LOTAdditions.m */; };
+		F49EAD8E20DCF1F500FAF170 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D701C420CA7F3B00172456 /* UIColor+Extension.m */; };
+		F49EAD8F20DCF1F500FAF170 /* FunctionFourViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FFB3B20D362850046F507 /* FunctionFourViewModel.m */; };
+		F49EAD9020DCF1F500FAF170 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1D720C94086002EFB87 /* MKAnnotationView+WebCache.m */; };
+		F49EAD9120DCF1F500FAF170 /* LOTAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD933207361F900100E37 /* LOTAsset.m */; };
+		F49EAD9220DCF1F500FAF170 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D16F20C94086002EFB87 /* MBProgressHUD.m */; };
+		F49EAD9320DCF1F500FAF170 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D19A20C94086002EFB87 /* UIScrollView+MJRefresh.m */; };
+		F49EAD9420DCF1F500FAF170 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D21220C94086002EFB87 /* UIViewController+HUD.m */; };
+		F49EAD9520DCF1F500FAF170 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1E120C94086002EFB87 /* SDWebImageDownloader.m */; };
+		F49EAD9620DCF1F500FAF170 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C0A98D20D275BE00E86A65 /* SSKeychain.m */; };
+		F49EAD9720DCF1F500FAF170 /* EaseEmotionEscape.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D22020C94086002EFB87 /* EaseEmotionEscape.m */; };
+		F49EAD9820DCF1F500FAF170 /* LOTTrimPathNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8F9207361F900100E37 /* LOTTrimPathNode.m */; };
+		F49EAD9920DCF1F500FAF170 /* EaseTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D25820C94086002EFB87 /* EaseTextView.m */; };
+		F49EAD9A20DCF1F500FAF170 /* LOTShapeGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD93E207361F900100E37 /* LOTShapeGroup.m */; };
+		F49EAD9B20DCF1F500FAF170 /* EMCDDeviceManager+Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D15320C94086002EFB87 /* EMCDDeviceManager+Microphone.m */; };
+		F49EAD9C20DCF1F500FAF170 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B7CD27204FF7F500676D18 /* AppDelegate.m */; };
+		F49EAD9D20DCF1F500FAF170 /* EaseBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24F20C94086002EFB87 /* EaseBubbleView.m */; };
+		F49EAD9E20DCF1F500FAF170 /* FunctionThreeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CE2B20C90993002EFB87 /* FunctionThreeHomeViewController.m */; };
+		F49EAD9F20DCF1F500FAF170 /* PSTCollectionViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1CC20C94086002EFB87 /* PSTCollectionViewUpdateItem.m */; };
+		F49EADA020DCF1F500FAF170 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8CE2073610700100E37 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		F49EADA120DCF1F500FAF170 /* LOTShapeStar.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD92B207361F900100E37 /* LOTShapeStar.m */; };
+		F49EADA220DCF1F500FAF170 /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D20C20C94086002EFB87 /* NSDateFormatter+Category.m */; };
+		F49EADA320DCF1F500FAF170 /* LOVELViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF9520C935F9002EFB87 /* LOVELViewController.m */; };
+		F49EADA420DCF1F500FAF170 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D21020C94086002EFB87 /* UIViewController+DismissKeyboard.m */; };
+		F49EADA520DCF1F500FAF170 /* EaseFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D25B20C94086002EFB87 /* EaseFaceView.m */; };
+		F49EADA620DCF1F500FAF170 /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D18220C94086002EFB87 /* MJRefreshAutoNormalFooter.m */; };
+		F49EADA720DCF1F500FAF170 /* LOTComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD95A207361F900100E37 /* LOTComposition.m */; };
+		F49EADA820DCF1F500FAF170 /* LOTBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD948207361F900100E37 /* LOTBezierPath.m */; };
+		F49EADA920DCF1F500FAF170 /* LOTValueCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD95B207361F900100E37 /* LOTValueCallback.m */; };
+		F49EADAA20DCF1F500FAF170 /* EaseMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1FF20C94086002EFB87 /* EaseMessageModel.m */; };
+		F49EADAB20DCF1F500FAF170 /* LOTTransformInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD908207361F900100E37 /* LOTTransformInterpolator.m */; };
+		F49EADAC20DCF1F500FAF170 /* PSTCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D1CA20C94086002EFB87 /* PSTCollectionViewLayout.m */; };
+		F49EADAD20DCF1F500FAF170 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D16D20C94086002EFB87 /* MBProgressHUD+Add.m */; };
+		F49EADAE20DCF1F500FAF170 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8D72073610700100E37 /* ViewController+MASAdditions.m */; };
+		F49EADAF20DCF1F500FAF170 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8DB2073610700100E37 /* MASCompositeConstraint.m */; };
+		F49EADB020DCF1F500FAF170 /* LOTMaskContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD970207361F900100E37 /* LOTMaskContainer.m */; };
+		F49EADB120DCF1F500FAF170 /* EaseChatToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D25220C94086002EFB87 /* EaseChatToolbar.m */; };
+		F49EADB220DCF1F500FAF170 /* EaseChatBarMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D26020C94086002EFB87 /* EaseChatBarMoreView.m */; };
+		F49EADB320DCF1F500FAF170 /* EaseFacialView.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D25D20C94086002EFB87 /* EaseFacialView.m */; };
+		F49EADB420DCF1F500FAF170 /* LOTFillRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD91F207361F900100E37 /* LOTFillRenderer.m */; };
+		F49EADB520DCF1F500FAF170 /* EMCDDeviceManager+ProximitySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D15520C94086002EFB87 /* EMCDDeviceManager+ProximitySensor.m */; };
+		F49EADB620DCF1F500FAF170 /* LOTAnimationTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD95E207361F900100E37 /* LOTAnimationTransitionController.m */; };
+		F49EADB720DCF1F500FAF170 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8DD2073610700100E37 /* MASLayoutConstraint.m */; };
+		F49EADB820DCF1F500FAF170 /* LOVEViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF9A20C937CB002EFB87 /* LOVEViewModel.m */; };
+		F49EADB920DCF1F500FAF170 /* EaseBubbleView+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24520C94086002EFB87 /* EaseBubbleView+Image.m */; };
+		F49EADBA20DCF1F500FAF170 /* LOTShapeGradientFill.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD930207361F900100E37 /* LOTShapeGradientFill.m */; };
+		F49EADBB20DCF1F500FAF170 /* LOTShapePath.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD93D207361F900100E37 /* LOTShapePath.m */; };
+		F49EADBC20DCF1F500FAF170 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CF6820C9175C002EFB87 /* BaseTabBarController.m */; };
+		F49EADBD20DCF1F500FAF170 /* EaseConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D22620C94086002EFB87 /* EaseConversationListViewController.m */; };
+		F49EADBE20DCF1F500FAF170 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D17320C94086002EFB87 /* MJRefreshAutoFooter.m */; };
+		F49EADBF20DCF1F500FAF170 /* EaseBubbleView+Video.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D24B20C94086002EFB87 /* EaseBubbleView+Video.m */; };
+		F49EADC020DCF1F500FAF170 /* LOTPolygonAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD90F207361F900100E37 /* LOTPolygonAnimator.m */; };
+		F49EADC220DCF1F500FAF170 /* HyphenateLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F440CE1D20C9042C002EFB87 /* HyphenateLite.framework */; };
+		F49EADC320DCF1F500FAF170 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F440D16620C94086002EFB87 /* libopencore-amrnb.a */; };
+		F49EADC420DCF1F500FAF170 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F440D16A20C94086002EFB87 /* libopencore-amrwb.a */; };
+		F49EADC520DCF1F500FAF170 /* libPods-ヾ(･ε･｀*).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3056A9519E5764F455F48D60 /* libPods-ヾ(･ε･｀*).a */; };
+		F49EADC720DCF1F500FAF170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B7CD31204FF7F500676D18 /* LaunchScreen.storyboard */; };
+		F49EADC820DCF1F500FAF170 /* LOVEMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D701BD20CA201500172456 /* LOVEMessageCell.xib */; };
+		F49EADC920DCF1F500FAF170 /* EaseUIResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F440D26820C94086002EFB87 /* EaseUIResource.bundle */; };
+		F49EADCA20DCF1F500FAF170 /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4C0A98A20D275BE00E86A65 /* SSKeychain.strings */; };
+		F49EADCB20DCF1F500FAF170 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45BD8E62073610700100E37 /* Info.plist */; };
+		F49EADCC20DCF1F500FAF170 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F440D19320C94086002EFB87 /* MJRefresh.bundle */; };
+		F49EADCD20DCF1F500FAF170 /* FunctionOneHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CE3D20C909B0002EFB87 /* FunctionOneHomeViewController.xib */; };
+		F49EADCE20DCF1F500FAF170 /* FunctionFourHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CE2520C9094F002EFB87 /* FunctionFourHomeViewController.xib */; };
+		F49EADCF20DCF1F500FAF170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B7CD2F204FF7F500676D18 /* Assets.xcassets */; };
+		F49EADD020DCF1F500FAF170 /* ChallangeAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C0A9EF20D27ED100E86A65 /* ChallangeAlertView.xib */; };
+		F49EADD120DCF1F500FAF170 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C0A97D20D2629000E86A65 /* LoginViewController.xib */; };
+		F49EADD220DCF1F500FAF170 /* TTLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CF8020C92E5B002EFB87 /* TTLoadingView.xib */; };
+		F49EADD320DCF1F500FAF170 /* FunctionTwoHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CE3320C9099F002EFB87 /* FunctionTwoHomeViewController.xib */; };
+		F49EADD420DCF1F500FAF170 /* LOTLocalResource in Resources */ = {isa = PBXBuildFile; fileRef = F45BDDA82073741500100E37 /* LOTLocalResource */; };
+		F49EADD520DCF1F500FAF170 /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F440D1F720C94086002EFB87 /* MWPhotoBrowser.bundle */; };
+		F49EADD620DCF1F500FAF170 /* LOVELViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CF9620C935F9002EFB87 /* LOVELViewController.xib */; };
+		F49EADD720DCF1F500FAF170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B7CD2C204FF7F500676D18 /* Main.storyboard */; };
+		F49EADD820DCF1F500FAF170 /* TTTextHintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CF8120C92E5B002EFB87 /* TTTextHintView.xib */; };
+		F49EADD920DCF1F500FAF170 /* FunctionThreeHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CE2C20C90993002EFB87 /* FunctionThreeHomeViewController.xib */; };
+		F49EADDA20DCF1F500FAF170 /* tryToSay in Resources */ = {isa = PBXBuildFile; fileRef = F440CF8D20C930F3002EFB87 /* tryToSay */; };
+		F49EADDC20DCF1F500FAF170 /* HyphenateLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F440CE1D20C9042C002EFB87 /* HyphenateLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4B4BC3420D1005900B86E35 /* LOVEGameAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B4BC3320D1005900B86E35 /* LOVEGameAudioManager.m */; };
 		F4B6CDD220CE159C002D6A87 /* LOVEModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDD120CE159C002D6A87 /* LOVEModel.m */; };
 		F4B6CDD820CE1D0E002D6A87 /* FunctionThreeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B6CDD720CE1D0E002D6A87 /* FunctionThreeViewModel.m */; };
@@ -269,6 +521,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F440CE4120C90B2D002EFB87 /* HyphenateLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49EADDB20DCF1F500FAF170 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F49EADDC20DCF1F500FAF170 /* HyphenateLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,6 +1007,8 @@
 		F45BDDA82073741500100E37 /* LOTLocalResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LOTLocalResource; sourceTree = "<group>"; };
 		F46CEF3220CF7178006CB1BA /* IMManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMManager.h; sourceTree = "<group>"; };
 		F46CEF3320CF7178006CB1BA /* IMManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMManager.m; sourceTree = "<group>"; };
+		F49EADE020DCF1F500FAF170 /* 打飞机.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "打飞机.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49EADE120DCF1F500FAF170 /* plane-version-info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "plane-version-info.plist"; path = "/Users/simon/Documents/MyProject/Loving/I❤U/plane-version-info.plist"; sourceTree = "<absolute>"; };
 		F4B4BC3220D1005900B86E35 /* LOVEGameAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOVEGameAudioManager.h; sourceTree = "<group>"; };
 		F4B4BC3320D1005900B86E35 /* LOVEGameAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOVEGameAudioManager.m; sourceTree = "<group>"; };
 		F4B6CDD020CE159C002D6A87 /* LOVEModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOVEModel.h; sourceTree = "<group>"; };
@@ -754,7 +1019,7 @@
 		F4B6CDDB20CE45EF002D6A87 /* LOVEPlaneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOVEPlaneView.m; sourceTree = "<group>"; };
 		F4B6CDDD20CE6F64002D6A87 /* LOVEPixelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LOVEPixelView.h; sourceTree = "<group>"; };
 		F4B6CDDE20CE6F64002D6A87 /* LOVEPixelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LOVEPixelView.m; sourceTree = "<group>"; };
-		F4B7CD23204FF7F500676D18 /* ヾ(･ε･｀*).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ヾ(･ε･｀*).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B7CD23204FF7F500676D18 /* 老婆专属的App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "老婆专属的App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B7CD26204FF7F500676D18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4B7CD27204FF7F500676D18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F4B7CD2D204FF7F500676D18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -797,6 +1062,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F49EADC120DCF1F500FAF170 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49EADC220DCF1F500FAF170 /* HyphenateLite.framework in Frameworks */,
+				F49EADC320DCF1F500FAF170 /* libopencore-amrnb.a in Frameworks */,
+				F49EADC420DCF1F500FAF170 /* libopencore-amrwb.a in Frameworks */,
+				F49EADC520DCF1F500FAF170 /* libPods-ヾ(･ε･｀*).a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4B7CD20204FF7F500676D18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1931,7 +2207,8 @@
 		F4B7CD24204FF7F500676D18 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4B7CD23204FF7F500676D18 /* ヾ(･ε･｀*).app */,
+				F4B7CD23204FF7F500676D18 /* 老婆专属的App.app */,
+				F49EADE020DCF1F500FAF170 /* 打飞机.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2017,6 +2294,7 @@
 				F4B7CD2F204FF7F500676D18 /* Assets.xcassets */,
 				F4B7CD31204FF7F500676D18 /* LaunchScreen.storyboard */,
 				F4B7CD34204FF7F500676D18 /* Info.plist */,
+				F49EADE120DCF1F500FAF170 /* plane-version-info.plist */,
 				F4B7CD35204FF7F500676D18 /* main.m */,
 			);
 			name = Support;
@@ -2106,9 +2384,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4B7CD22204FF7F500676D18 /* ヾ(･ε･｀*) */ = {
+		F49EACDB20DCF1F500FAF170 /* 打飞机 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4B7CD39204FF7F500676D18 /* Build configuration list for PBXNativeTarget "ヾ(･ε･｀*)" */;
+			buildConfigurationList = F49EADDD20DCF1F500FAF170 /* Build configuration list for PBXNativeTarget "打飞机" */;
+			buildPhases = (
+				F49EACDC20DCF1F500FAF170 /* [CP] Check Pods Manifest.lock */,
+				F49EACDD20DCF1F500FAF170 /* Sources */,
+				F49EADC120DCF1F500FAF170 /* Frameworks */,
+				F49EADC620DCF1F500FAF170 /* Resources */,
+				F49EADDB20DCF1F500FAF170 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "打飞机";
+			productName = "I❤U";
+			productReference = F49EADE020DCF1F500FAF170 /* 打飞机.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4B7CD22204FF7F500676D18 /* 老婆专属的App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4B7CD39204FF7F500676D18 /* Build configuration list for PBXNativeTarget "老婆专属的App" */;
 			buildPhases = (
 				5FFA5A4F7ECFE4FD1339714C /* [CP] Check Pods Manifest.lock */,
 				F4B7CD1F204FF7F500676D18 /* Sources */,
@@ -2120,9 +2417,9 @@
 			);
 			dependencies = (
 			);
-			name = "ヾ(･ε･｀*)";
+			name = "老婆专属的App";
 			productName = "I❤U";
-			productReference = F4B7CD23204FF7F500676D18 /* ヾ(･ε･｀*).app */;
+			productReference = F4B7CD23204FF7F500676D18 /* 老婆专属的App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2134,6 +2431,9 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "吕旭明";
 				TargetAttributes = {
+					F49EACDB20DCF1F500FAF170 = {
+						ProvisioningStyle = Automatic;
+					};
 					F4B7CD22204FF7F500676D18 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -2158,12 +2458,40 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4B7CD22204FF7F500676D18 /* ヾ(･ε･｀*) */,
+				F4B7CD22204FF7F500676D18 /* 老婆专属的App */,
+				F49EACDB20DCF1F500FAF170 /* 打飞机 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F49EADC620DCF1F500FAF170 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49EADC720DCF1F500FAF170 /* LaunchScreen.storyboard in Resources */,
+				F49EADC820DCF1F500FAF170 /* LOVEMessageCell.xib in Resources */,
+				F49EADC920DCF1F500FAF170 /* EaseUIResource.bundle in Resources */,
+				F49EADCA20DCF1F500FAF170 /* SSKeychain.strings in Resources */,
+				F49EADCB20DCF1F500FAF170 /* Info.plist in Resources */,
+				F49EADCC20DCF1F500FAF170 /* MJRefresh.bundle in Resources */,
+				F49EADCD20DCF1F500FAF170 /* FunctionOneHomeViewController.xib in Resources */,
+				F49EADCE20DCF1F500FAF170 /* FunctionFourHomeViewController.xib in Resources */,
+				F49EADCF20DCF1F500FAF170 /* Assets.xcassets in Resources */,
+				F49EADD020DCF1F500FAF170 /* ChallangeAlertView.xib in Resources */,
+				F49EADD120DCF1F500FAF170 /* LoginViewController.xib in Resources */,
+				F49EADD220DCF1F500FAF170 /* TTLoadingView.xib in Resources */,
+				F49EADD320DCF1F500FAF170 /* FunctionTwoHomeViewController.xib in Resources */,
+				F49EADD420DCF1F500FAF170 /* LOTLocalResource in Resources */,
+				F49EADD520DCF1F500FAF170 /* MWPhotoBrowser.bundle in Resources */,
+				F49EADD620DCF1F500FAF170 /* LOVELViewController.xib in Resources */,
+				F49EADD720DCF1F500FAF170 /* Main.storyboard in Resources */,
+				F49EADD820DCF1F500FAF170 /* TTTextHintView.xib in Resources */,
+				F49EADD920DCF1F500FAF170 /* FunctionThreeHomeViewController.xib in Resources */,
+				F49EADDA20DCF1F500FAF170 /* tryToSay in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4B7CD21204FF7F500676D18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2212,9 +2540,261 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F49EACDC20DCF1F500FAF170 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ヾ(･ε･｀*)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F49EACDD20DCF1F500FAF170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49EACDE20DCF1F500FAF170 /* MWGridCell.m in Sources */,
+				F49EACDF20DCF1F500FAF170 /* MWZoomingScrollView.m in Sources */,
+				F49EACE020DCF1F500FAF170 /* EaseMessageTimeCell.m in Sources */,
+				F49EACE120DCF1F500FAF170 /* EaseUserCell.m in Sources */,
+				F49EACE220DCF1F500FAF170 /* NSValue+Compat.m in Sources */,
+				F49EACE320DCF1F500FAF170 /* UIImage+MWPhotoBrowser.m in Sources */,
+				F49EACE420DCF1F500FAF170 /* LOTMask.m in Sources */,
+				F49EACE520DCF1F500FAF170 /* NSDate+Category.m in Sources */,
+				F49EACE620DCF1F500FAF170 /* EMAudioRecorderUtil.m in Sources */,
+				F49EACE720DCF1F500FAF170 /* EaseBubbleView+Gif.m in Sources */,
+				F49EACE820DCF1F500FAF170 /* PSTCollectionViewController.m in Sources */,
+				F49EACE920DCF1F500FAF170 /* EaseMessageViewController.m in Sources */,
+				F49EACEA20DCF1F500FAF170 /* SDWebImageDecoder.m in Sources */,
+				F49EACEB20DCF1F500FAF170 /* LOTKeypath.m in Sources */,
+				F49EACEC20DCF1F500FAF170 /* LOTInterpolatorCallback.m in Sources */,
+				F49EACED20DCF1F500FAF170 /* LOVEModel.m in Sources */,
+				F49EACEE20DCF1F500FAF170 /* BaseNavigationController.m in Sources */,
+				F49EACEF20DCF1F500FAF170 /* UIImage+WebP.m in Sources */,
+				F49EACF020DCF1F500FAF170 /* LOTCacheProvider.m in Sources */,
+				F49EACF120DCF1F500FAF170 /* MJRefreshAutoStateFooter.m in Sources */,
+				F49EACF220DCF1F500FAF170 /* main.m in Sources */,
+				F49EACF320DCF1F500FAF170 /* LOTShapeTrimPath.m in Sources */,
+				F49EACF420DCF1F500FAF170 /* EaseMessageCell.m in Sources */,
+				F49EACF520DCF1F500FAF170 /* MJRefreshConst.m in Sources */,
+				F49EACF620DCF1F500FAF170 /* MASViewConstraint.m in Sources */,
+				F49EACF720DCF1F500FAF170 /* LOTPathAnimator.m in Sources */,
+				F49EACF820DCF1F500FAF170 /* PSTGridLayoutSection.m in Sources */,
+				F49EACF920DCF1F500FAF170 /* EaseUI.m in Sources */,
+				F49EACFA20DCF1F500FAF170 /* UIColor.m in Sources */,
+				F49EACFB20DCF1F500FAF170 /* PSTCollectionViewCell.m in Sources */,
+				F49EACFC20DCF1F500FAF170 /* LOTArrayInterpolator.m in Sources */,
+				F49EACFD20DCF1F500FAF170 /* NSArray+MASAdditions.m in Sources */,
+				F49EACFE20DCF1F500FAF170 /* LOVEPlaneView.m in Sources */,
+				F49EACFF20DCF1F500FAF170 /* LOTLayer.m in Sources */,
+				F49EAD0020DCF1F500FAF170 /* MJRefreshGifHeader.m in Sources */,
+				F49EAD0120DCF1F500FAF170 /* PSTGridLayoutItem.m in Sources */,
+				F49EAD0220DCF1F500FAF170 /* EaseBubbleView+File.m in Sources */,
+				F49EAD0320DCF1F500FAF170 /* EaseMessageReadManager.m in Sources */,
+				F49EAD0420DCF1F500FAF170 /* LOTGradientFillRender.m in Sources */,
+				F49EAD0520DCF1F500FAF170 /* MJRefreshFooter.m in Sources */,
+				F49EAD0620DCF1F500FAF170 /* EaseConversationModel.m in Sources */,
+				F49EAD0720DCF1F500FAF170 /* LOTColorInterpolator.m in Sources */,
+				F49EAD0820DCF1F500FAF170 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
+				F49EAD0920DCF1F500FAF170 /* MJRefreshBackStateFooter.m in Sources */,
+				F49EAD0A20DCF1F500FAF170 /* MJRefreshStateHeader.m in Sources */,
+				F49EAD0B20DCF1F500FAF170 /* LOTAnimatedSwitch.m in Sources */,
+				F49EAD0C20DCF1F500FAF170 /* MWGridViewController.m in Sources */,
+				F49EAD0D20DCF1F500FAF170 /* EaseBubbleView+Location.m in Sources */,
+				F49EAD0E20DCF1F500FAF170 /* LOTRadialGradientLayer.m in Sources */,
+				F49EAD0F20DCF1F500FAF170 /* LOTPointInterpolator.m in Sources */,
+				F49EAD1020DCF1F500FAF170 /* LOTShapeRepeater.m in Sources */,
+				F49EAD1120DCF1F500FAF170 /* FixFopen.c in Sources */,
+				F49EAD1220DCF1F500FAF170 /* MJRefreshBackNormalFooter.m in Sources */,
+				F49EAD1320DCF1F500FAF170 /* MASViewAttribute.m in Sources */,
+				F49EAD1420DCF1F500FAF170 /* DeviceUtil.m in Sources */,
+				F49EAD1520DCF1F500FAF170 /* MWTapDetectingImageView.m in Sources */,
+				F49EAD1620DCF1F500FAF170 /* LOTValueInterpolator.m in Sources */,
+				F49EAD1720DCF1F500FAF170 /* EMCDDeviceManager+Remind.m in Sources */,
+				F49EAD1820DCF1F500FAF170 /* LOTRoundedRectAnimator.m in Sources */,
+				F49EAD1920DCF1F500FAF170 /* LOTBlockCallback.m in Sources */,
+				F49EAD1A20DCF1F500FAF170 /* LOTAnimatorNode.m in Sources */,
+				F49EAD1B20DCF1F500FAF170 /* FunctionTwoViewModel.m in Sources */,
+				F49EAD1C20DCF1F500FAF170 /* PSTCollectionView.m in Sources */,
+				F49EAD1D20DCF1F500FAF170 /* LOTCircleAnimator.m in Sources */,
+				F49EAD1E20DCF1F500FAF170 /* LOTKeyframe.m in Sources */,
+				F49EAD1F20DCF1F500FAF170 /* LOTShapeCircle.m in Sources */,
+				F49EAD2020DCF1F500FAF170 /* LOTRenderNode.m in Sources */,
+				F49EAD2120DCF1F500FAF170 /* FunctionThreeViewModel.m in Sources */,
+				F49EAD2220DCF1F500FAF170 /* LOTLayerGroup.m in Sources */,
+				F49EAD2320DCF1F500FAF170 /* LoginViewModel.m in Sources */,
+				F49EAD2420DCF1F500FAF170 /* PSTCollectionViewFlowLayout.m in Sources */,
+				F49EAD2520DCF1F500FAF170 /* SDImageCache.m in Sources */,
+				F49EAD2620DCF1F500FAF170 /* UIButton+WebCache.m in Sources */,
+				F49EAD2720DCF1F500FAF170 /* EaseLocationViewController.m in Sources */,
+				F49EAD2820DCF1F500FAF170 /* LOTShapeStroke.m in Sources */,
+				F49EAD2920DCF1F500FAF170 /* UIBezierPath.m in Sources */,
+				F49EAD2A20DCF1F500FAF170 /* LOVEGameAudioManager.m in Sources */,
+				F49EAD2B20DCF1F500FAF170 /* NSString+Valid.m in Sources */,
+				F49EAD2C20DCF1F500FAF170 /* SDWebImageManager.m in Sources */,
+				F49EAD2D20DCF1F500FAF170 /* LOVEMessageCell.m in Sources */,
+				F49EAD2E20DCF1F500FAF170 /* LOTAssetGroup.m in Sources */,
+				F49EAD2F20DCF1F500FAF170 /* MJRefreshBackGifFooter.m in Sources */,
+				F49EAD3020DCF1F500FAF170 /* EaseBaseMessageCell.m in Sources */,
+				F49EAD3120DCF1F500FAF170 /* MASConstraint.m in Sources */,
+				F49EAD3220DCF1F500FAF170 /* EMCDDeviceManager+Media.m in Sources */,
+				F49EAD3320DCF1F500FAF170 /* SDWebImagePrefetcher.m in Sources */,
+				F49EAD3420DCF1F500FAF170 /* LOTShapeTransform.m in Sources */,
+				F49EAD3520DCF1F500FAF170 /* amrFileCodec.mm in Sources */,
+				F49EAD3620DCF1F500FAF170 /* SSKeychainQuery.m in Sources */,
+				F49EAD3720DCF1F500FAF170 /* EaseImageView.m in Sources */,
+				F49EAD3820DCF1F500FAF170 /* PSTCollectionViewData.m in Sources */,
+				F49EAD3920DCF1F500FAF170 /* LOTLayerContainer.m in Sources */,
+				F49EAD3A20DCF1F500FAF170 /* FunctionOneViewModel.m in Sources */,
+				F49EAD3B20DCF1F500FAF170 /* MWCaptionView.m in Sources */,
+				F49EAD3C20DCF1F500FAF170 /* UIScrollView+MJExtension.m in Sources */,
+				F49EAD3D20DCF1F500FAF170 /* EaseRefreshTableViewController.m in Sources */,
+				F49EAD3E20DCF1F500FAF170 /* UIImageView+HighlightedWebCache.m in Sources */,
+				F49EAD3F20DCF1F500FAF170 /* LOVEPixelView.m in Sources */,
+				F49EAD4020DCF1F500FAF170 /* MainViewController.m in Sources */,
+				F49EAD4120DCF1F500FAF170 /* PSTCollectionViewItemKey.m in Sources */,
+				F49EAD4220DCF1F500FAF170 /* LOTPolystarAnimator.m in Sources */,
+				F49EAD4320DCF1F500FAF170 /* UIColor+Expanded.m in Sources */,
+				F49EAD4420DCF1F500FAF170 /* NSData+ImageContentType.m in Sources */,
+				F49EAD4520DCF1F500FAF170 /* BaseViewModel.m in Sources */,
+				F49EAD4620DCF1F500FAF170 /* LOTNumberInterpolator.m in Sources */,
+				F49EAD4720DCF1F500FAF170 /* StringUtil.m in Sources */,
+				F49EAD4820DCF1F500FAF170 /* SDWebImageDownloaderOperation.m in Sources */,
+				F49EAD4920DCF1F500FAF170 /* MWTapDetectingView.m in Sources */,
+				F49EAD4A20DCF1F500FAF170 /* EaseEmotionManager.m in Sources */,
+				F49EAD4B20DCF1F500FAF170 /* EMVoiceConverter.mm in Sources */,
+				F49EAD4C20DCF1F500FAF170 /* TTTipView.m in Sources */,
+				F49EAD4D20DCF1F500FAF170 /* FDAlertView.m in Sources */,
+				F49EAD4E20DCF1F500FAF170 /* CoverView.m in Sources */,
+				F49EAD4F20DCF1F500FAF170 /* LOTPathInterpolator.m in Sources */,
+				F49EAD5020DCF1F500FAF170 /* wav.mm in Sources */,
+				F49EAD5120DCF1F500FAF170 /* EMCDDeviceManagerBase.m in Sources */,
+				F49EAD5220DCF1F500FAF170 /* IMManager.m in Sources */,
+				F49EAD5320DCF1F500FAF170 /* UIImage+GIF.m in Sources */,
+				F49EAD5420DCF1F500FAF170 /* EaseSDKHelper.m in Sources */,
+				F49EAD5520DCF1F500FAF170 /* LOTShapeRectangle.m in Sources */,
+				F49EAD5620DCF1F500FAF170 /* LOVEMessage.m in Sources */,
+				F49EAD5720DCF1F500FAF170 /* UIImageView+WebCache.m in Sources */,
+				F49EAD5820DCF1F500FAF170 /* EaseBubbleView+Text.m in Sources */,
+				F49EAD5920DCF1F500FAF170 /* Log.m in Sources */,
+				F49EAD5A20DCF1F500FAF170 /* EaseEmoji.m in Sources */,
+				F49EAD5B20DCF1F500FAF170 /* FunctionFourHomeViewController.m in Sources */,
+				F49EAD5C20DCF1F500FAF170 /* EaseUsersListViewController.m in Sources */,
+				F49EAD5D20DCF1F500FAF170 /* EaseRecordView.m in Sources */,
+				F49EAD5E20DCF1F500FAF170 /* MJRefreshHeader.m in Sources */,
+				F49EAD5F20DCF1F500FAF170 /* EaseChineseToPinyin.m in Sources */,
+				F49EAD6020DCF1F500FAF170 /* SimulateIDFA.m in Sources */,
+				F49EAD6120DCF1F500FAF170 /* UIUtil.m in Sources */,
+				F49EAD6220DCF1F500FAF170 /* MJRefreshNormalHeader.m in Sources */,
+				F49EAD6320DCF1F500FAF170 /* LOTAnimationView+Extension.m in Sources */,
+				F49EAD6420DCF1F500FAF170 /* LOTStrokeRenderer.m in Sources */,
+				F49EAD6520DCF1F500FAF170 /* LOTRenderGroup.m in Sources */,
+				F49EAD6620DCF1F500FAF170 /* PSTGridLayoutRow.m in Sources */,
+				F49EAD6720DCF1F500FAF170 /* SystemUtil.m in Sources */,
+				F49EAD6820DCF1F500FAF170 /* FunctionOneHomeViewController.m in Sources */,
+				F49EAD6920DCF1F500FAF170 /* LOTRepeaterRenderer.m in Sources */,
+				F49EAD6A20DCF1F500FAF170 /* FunctionTwoHomeViewController.m in Sources */,
+				F49EAD6B20DCF1F500FAF170 /* View+MASAdditions.m in Sources */,
+				F49EAD6C20DCF1F500FAF170 /* DACircularProgressView.m in Sources */,
+				F49EAD6D20DCF1F500FAF170 /* EaseCustomMessageCell.m in Sources */,
+				F49EAD6E20DCF1F500FAF170 /* LOTAnimationCache.m in Sources */,
+				F49EAD6F20DCF1F500FAF170 /* MJRefreshBackFooter.m in Sources */,
+				F49EAD7020DCF1F500FAF170 /* MWPhotoBrowser.m in Sources */,
+				F49EAD7120DCF1F500FAF170 /* EaseUserModel.m in Sources */,
+				F49EAD7220DCF1F500FAF170 /* EMAudioPlayerUtil.m in Sources */,
+				F49EAD7320DCF1F500FAF170 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
+				F49EAD7420DCF1F500FAF170 /* CALayer+Compat.m in Sources */,
+				F49EAD7520DCF1F500FAF170 /* MWPhoto.m in Sources */,
+				F49EAD7620DCF1F500FAF170 /* PSTGridLayoutInfo.m in Sources */,
+				F49EAD7720DCF1F500FAF170 /* SDWebImageCompat.m in Sources */,
+				F49EAD7820DCF1F500FAF170 /* LoginViewController.m in Sources */,
+				F49EAD7920DCF1F500FAF170 /* UIImage+MultiFormat.m in Sources */,
+				F49EAD7A20DCF1F500FAF170 /* LOTCompositionContainer.m in Sources */,
+				F49EAD7B20DCF1F500FAF170 /* MJRefreshComponent.m in Sources */,
+				F49EAD7C20DCF1F500FAF170 /* EaseViewController.m in Sources */,
+				F49EAD7D20DCF1F500FAF170 /* MJRefreshAutoGifFooter.m in Sources */,
+				F49EAD7E20DCF1F500FAF170 /* MASConstraintMaker.m in Sources */,
+				F49EAD7F20DCF1F500FAF170 /* BaseViewController.m in Sources */,
+				F49EAD8020DCF1F500FAF170 /* HttpUtil.m in Sources */,
+				F49EAD8120DCF1F500FAF170 /* LOTAnimatedControl.m in Sources */,
+				F49EAD8220DCF1F500FAF170 /* EaseChatToolbarItem.m in Sources */,
+				F49EAD8320DCF1F500FAF170 /* ChallangeAlertView.m in Sources */,
+				F49EAD8420DCF1F500FAF170 /* LOTShapeFill.m in Sources */,
+				F49EAD8520DCF1F500FAF170 /* EaseBubbleView+Voice.m in Sources */,
+				F49EAD8620DCF1F500FAF170 /* UIView+WebCacheOperation.m in Sources */,
+				F49EAD8720DCF1F500FAF170 /* LOTBezierData.m in Sources */,
+				F49EAD8820DCF1F500FAF170 /* UIView+MJExtension.m in Sources */,
+				F49EAD8920DCF1F500FAF170 /* EaseEmojiEmoticons.m in Sources */,
+				F49EAD8A20DCF1F500FAF170 /* EaseConversationCell.m in Sources */,
+				F49EAD8B20DCF1F500FAF170 /* LOTAnimationView.m in Sources */,
+				F49EAD8C20DCF1F500FAF170 /* LOTSizeInterpolator.m in Sources */,
+				F49EAD8D20DCF1F500FAF170 /* CGGeometry+LOTAdditions.m in Sources */,
+				F49EAD8E20DCF1F500FAF170 /* UIColor+Extension.m in Sources */,
+				F49EAD8F20DCF1F500FAF170 /* FunctionFourViewModel.m in Sources */,
+				F49EAD9020DCF1F500FAF170 /* MKAnnotationView+WebCache.m in Sources */,
+				F49EAD9120DCF1F500FAF170 /* LOTAsset.m in Sources */,
+				F49EAD9220DCF1F500FAF170 /* MBProgressHUD.m in Sources */,
+				F49EAD9320DCF1F500FAF170 /* UIScrollView+MJRefresh.m in Sources */,
+				F49EAD9420DCF1F500FAF170 /* UIViewController+HUD.m in Sources */,
+				F49EAD9520DCF1F500FAF170 /* SDWebImageDownloader.m in Sources */,
+				F49EAD9620DCF1F500FAF170 /* SSKeychain.m in Sources */,
+				F49EAD9720DCF1F500FAF170 /* EaseEmotionEscape.m in Sources */,
+				F49EAD9820DCF1F500FAF170 /* LOTTrimPathNode.m in Sources */,
+				F49EAD9920DCF1F500FAF170 /* EaseTextView.m in Sources */,
+				F49EAD9A20DCF1F500FAF170 /* LOTShapeGroup.m in Sources */,
+				F49EAD9B20DCF1F500FAF170 /* EMCDDeviceManager+Microphone.m in Sources */,
+				F49EAD9C20DCF1F500FAF170 /* AppDelegate.m in Sources */,
+				F49EAD9D20DCF1F500FAF170 /* EaseBubbleView.m in Sources */,
+				F49EAD9E20DCF1F500FAF170 /* FunctionThreeHomeViewController.m in Sources */,
+				F49EAD9F20DCF1F500FAF170 /* PSTCollectionViewUpdateItem.m in Sources */,
+				F49EADA020DCF1F500FAF170 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				F49EADA120DCF1F500FAF170 /* LOTShapeStar.m in Sources */,
+				F49EADA220DCF1F500FAF170 /* NSDateFormatter+Category.m in Sources */,
+				F49EADA320DCF1F500FAF170 /* LOVELViewController.m in Sources */,
+				F49EADA420DCF1F500FAF170 /* UIViewController+DismissKeyboard.m in Sources */,
+				F49EADA520DCF1F500FAF170 /* EaseFaceView.m in Sources */,
+				F49EADA620DCF1F500FAF170 /* MJRefreshAutoNormalFooter.m in Sources */,
+				F49EADA720DCF1F500FAF170 /* LOTComposition.m in Sources */,
+				F49EADA820DCF1F500FAF170 /* LOTBezierPath.m in Sources */,
+				F49EADA920DCF1F500FAF170 /* LOTValueCallback.m in Sources */,
+				F49EADAA20DCF1F500FAF170 /* EaseMessageModel.m in Sources */,
+				F49EADAB20DCF1F500FAF170 /* LOTTransformInterpolator.m in Sources */,
+				F49EADAC20DCF1F500FAF170 /* PSTCollectionViewLayout.m in Sources */,
+				F49EADAD20DCF1F500FAF170 /* MBProgressHUD+Add.m in Sources */,
+				F49EADAE20DCF1F500FAF170 /* ViewController+MASAdditions.m in Sources */,
+				F49EADAF20DCF1F500FAF170 /* MASCompositeConstraint.m in Sources */,
+				F49EADB020DCF1F500FAF170 /* LOTMaskContainer.m in Sources */,
+				F49EADB120DCF1F500FAF170 /* EaseChatToolbar.m in Sources */,
+				F49EADB220DCF1F500FAF170 /* EaseChatBarMoreView.m in Sources */,
+				F49EADB320DCF1F500FAF170 /* EaseFacialView.m in Sources */,
+				F49EADB420DCF1F500FAF170 /* LOTFillRenderer.m in Sources */,
+				F49EADB520DCF1F500FAF170 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
+				F49EADB620DCF1F500FAF170 /* LOTAnimationTransitionController.m in Sources */,
+				F49EADB720DCF1F500FAF170 /* MASLayoutConstraint.m in Sources */,
+				F49EADB820DCF1F500FAF170 /* LOVEViewModel.m in Sources */,
+				F49EADB920DCF1F500FAF170 /* EaseBubbleView+Image.m in Sources */,
+				F49EADBA20DCF1F500FAF170 /* LOTShapeGradientFill.m in Sources */,
+				F49EADBB20DCF1F500FAF170 /* LOTShapePath.m in Sources */,
+				F49EADBC20DCF1F500FAF170 /* BaseTabBarController.m in Sources */,
+				F49EADBD20DCF1F500FAF170 /* EaseConversationListViewController.m in Sources */,
+				F49EADBE20DCF1F500FAF170 /* MJRefreshAutoFooter.m in Sources */,
+				F49EADBF20DCF1F500FAF170 /* EaseBubbleView+Video.m in Sources */,
+				F49EADC020DCF1F500FAF170 /* LOTPolygonAnimator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F4B7CD1F204FF7F500676D18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2479,6 +3059,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F49EADDE20DCF1F500FAF170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC0B2263D29052FAC6969CB /* Pods-ヾ(･ε･｀*).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y6UVYHPY2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/plane-version-info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/I❤U/3rd/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/I❤U/3rd/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyu.planeGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F49EADDF20DCF1F500FAF170 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE2375003879E556CC07929 /* Pods-ヾ(･ε･｀*).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Y6UVYHPY2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/plane-version-info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/I❤U/3rd/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/I❤U/3rd/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyu.planeGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		F4B7CD37204FF7F500676D18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2591,7 +3231,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Y6UVYHPY2;
+				DEVELOPMENT_TEAM = KS98J4RYQ2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
@@ -2606,7 +3246,7 @@
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lyu.planeGame;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yiyou.I-U";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2621,7 +3261,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Y6UVYHPY2;
+				DEVELOPMENT_TEAM = KS98J4RYQ2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
@@ -2636,7 +3276,7 @@
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lyu.planeGame;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yiyou.I-U";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2646,6 +3286,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F49EADDD20DCF1F500FAF170 /* Build configuration list for PBXNativeTarget "打飞机" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F49EADDE20DCF1F500FAF170 /* Debug */,
+				F49EADDF20DCF1F500FAF170 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F4B7CD1E204FF7F500676D18 /* Build configuration list for PBXProject "ヾ(･ε･｀*)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2655,7 +3304,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4B7CD39204FF7F500676D18 /* Build configuration list for PBXNativeTarget "ヾ(･ε･｀*)" */ = {
+		F4B7CD39204FF7F500676D18 /* Build configuration list for PBXNativeTarget "老婆专属的App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4B7CD3A204FF7F500676D18 /* Debug */,
