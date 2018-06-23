@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43A5D10082B96E023F5CC9C5 /* libPods-ヾ(･ε･｀*).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3056A9519E5764F455F48D60 /* libPods-ヾ(･ε･｀*).a */; };
+		1316C1C7CB42B8EE6A70DF99 /* libPods-打飞机.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF48777F63EE55C2E1A50FB /* libPods-打飞机.a */; };
 		9D7AC3E2206235F800592C74 /* HttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7AC3E1206235F800592C74 /* HttpUtil.m */; };
+		BB17C7B08147F26E03F5E4CE /* libPods-老婆专属的App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AF0FDABBFDF383C2BD6933 /* libPods-老婆专属的App.a */; };
 		F42FFB3C20D362850046F507 /* FunctionFourViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F42FFB3B20D362850046F507 /* FunctionFourViewModel.m */; };
 		F440CE2620C9094F002EFB87 /* FunctionFourHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F440CE2420C9094F002EFB87 /* FunctionFourHomeViewController.m */; };
 		F440CE2720C9094F002EFB87 /* FunctionFourHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F440CE2520C9094F002EFB87 /* FunctionFourHomeViewController.xib */; };
@@ -539,12 +540,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0DC0B2263D29052FAC6969CB /* Pods-ヾ(･ε･｀*).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ヾ(･ε･｀*).debug.xcconfig"; path = "Pods/Target Support Files/Pods-ヾ(･ε･｀*)/Pods-ヾ(･ε･｀*).debug.xcconfig"; sourceTree = "<group>"; };
+		0647EF59917A52B820DECB5F /* Pods-打飞机.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-打飞机.debug.xcconfig"; path = "Pods/Target Support Files/Pods-打飞机/Pods-打飞机.debug.xcconfig"; sourceTree = "<group>"; };
+		16DA95B8364C19952B191172 /* Pods-打飞机.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-打飞机.release.xcconfig"; path = "Pods/Target Support Files/Pods-打飞机/Pods-打飞机.release.xcconfig"; sourceTree = "<group>"; };
+		1707682467340E08267591C7 /* Pods-老婆专属的App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-老婆专属的App.release.xcconfig"; path = "Pods/Target Support Files/Pods-老婆专属的App/Pods-老婆专属的App.release.xcconfig"; sourceTree = "<group>"; };
+		1CF48777F63EE55C2E1A50FB /* libPods-打飞机.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-打飞机.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24339D25D2403E9506F0430A /* Pods-老婆专属的App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-老婆专属的App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-老婆专属的App/Pods-老婆专属的App.debug.xcconfig"; sourceTree = "<group>"; };
 		3056A9519E5764F455F48D60 /* libPods-ヾ(･ε･｀*).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ヾ(･ε･｀*).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82AF0FDABBFDF383C2BD6933 /* libPods-老婆专属的App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-老婆专属的App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D7AC3E0206235F800592C74 /* HttpUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpUtil.h; sourceTree = "<group>"; };
 		9D7AC3E1206235F800592C74 /* HttpUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpUtil.m; sourceTree = "<group>"; };
 		9D7AC3E3206276B900592C74 /* ヾ(･ε･｀*).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ヾ(･ε･｀*).entitlements"; sourceTree = "<group>"; };
-		BCE2375003879E556CC07929 /* Pods-ヾ(･ε･｀*).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ヾ(･ε･｀*).release.xcconfig"; path = "Pods/Target Support Files/Pods-ヾ(･ε･｀*)/Pods-ヾ(･ε･｀*).release.xcconfig"; sourceTree = "<group>"; };
 		F42FFB3A20D362850046F507 /* FunctionFourViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionFourViewModel.h; sourceTree = "<group>"; };
 		F42FFB3B20D362850046F507 /* FunctionFourViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionFourViewModel.m; sourceTree = "<group>"; };
 		F440CE1D20C9042C002EFB87 /* HyphenateLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HyphenateLite.framework; sourceTree = "<group>"; };
@@ -1070,6 +1075,7 @@
 				F49EADC320DCF1F500FAF170 /* libopencore-amrnb.a in Frameworks */,
 				F49EADC420DCF1F500FAF170 /* libopencore-amrwb.a in Frameworks */,
 				F49EADC520DCF1F500FAF170 /* libPods-ヾ(･ε･｀*).a in Frameworks */,
+				1316C1C7CB42B8EE6A70DF99 /* libPods-打飞机.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,7 +1086,7 @@
 				F440CE4020C90B2D002EFB87 /* HyphenateLite.framework in Frameworks */,
 				F440D27420C94086002EFB87 /* libopencore-amrnb.a in Frameworks */,
 				F440D27520C94086002EFB87 /* libopencore-amrwb.a in Frameworks */,
-				43A5D10082B96E023F5CC9C5 /* libPods-ヾ(･ε･｀*).a in Frameworks */,
+				BB17C7B08147F26E03F5E4CE /* libPods-老婆专属的App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,8 +1096,10 @@
 		5F52DFA4396AE71D2D35ABFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0DC0B2263D29052FAC6969CB /* Pods-ヾ(･ε･｀*).debug.xcconfig */,
-				BCE2375003879E556CC07929 /* Pods-ヾ(･ε･｀*).release.xcconfig */,
+				0647EF59917A52B820DECB5F /* Pods-打飞机.debug.xcconfig */,
+				16DA95B8364C19952B191172 /* Pods-打飞机.release.xcconfig */,
+				24339D25D2403E9506F0430A /* Pods-老婆专属的App.debug.xcconfig */,
+				1707682467340E08267591C7 /* Pods-老婆专属的App.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1100,6 +1108,8 @@
 			isa = PBXGroup;
 			children = (
 				3056A9519E5764F455F48D60 /* libPods-ヾ(･ε･｀*).a */,
+				1CF48777F63EE55C2E1A50FB /* libPods-打飞机.a */,
+				82AF0FDABBFDF383C2BD6933 /* libPods-老婆专属的App.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2407,7 +2417,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4B7CD39204FF7F500676D18 /* Build configuration list for PBXNativeTarget "老婆专属的App" */;
 			buildPhases = (
-				5FFA5A4F7ECFE4FD1339714C /* [CP] Check Pods Manifest.lock */,
+				B77836EF2CE14E36F06539BA /* [CP] Check Pods Manifest.lock */,
 				F4B7CD1F204FF7F500676D18 /* Sources */,
 				F4B7CD20204FF7F500676D18 /* Frameworks */,
 				F4B7CD21204FF7F500676D18 /* Resources */,
@@ -2522,7 +2532,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5FFA5A4F7ECFE4FD1339714C /* [CP] Check Pods Manifest.lock */ = {
+		B77836EF2CE14E36F06539BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2533,7 +2543,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ヾ(･ε･｀*)-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-老婆专属的App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2551,7 +2561,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ヾ(･ε･｀*)-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-打飞机-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3061,7 +3071,7 @@
 /* Begin XCBuildConfiguration section */
 		F49EADDE20DCF1F500FAF170 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DC0B2263D29052FAC6969CB /* Pods-ヾ(･ε･｀*).debug.xcconfig */;
+			baseConfigurationReference = 0647EF59917A52B820DECB5F /* Pods-打飞机.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
@@ -3095,7 +3105,7 @@
 		};
 		F49EADDF20DCF1F500FAF170 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCE2375003879E556CC07929 /* Pods-ヾ(･ε･｀*).release.xcconfig */;
+			baseConfigurationReference = 16DA95B8364C19952B191172 /* Pods-打飞机.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
@@ -3233,7 +3243,7 @@
 		};
 		F4B7CD3A204FF7F500676D18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DC0B2263D29052FAC6969CB /* Pods-ヾ(･ε･｀*).debug.xcconfig */;
+			baseConfigurationReference = 24339D25D2403E9506F0430A /* Pods-老婆专属的App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
@@ -3268,7 +3278,7 @@
 		};
 		F4B7CD3B204FF7F500676D18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCE2375003879E556CC07929 /* Pods-ヾ(･ε･｀*).release.xcconfig */;
+			baseConfigurationReference = 1707682467340E08267591C7 /* Pods-老婆专属的App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
