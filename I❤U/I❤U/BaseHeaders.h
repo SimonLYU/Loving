@@ -31,6 +31,7 @@ lipo HyphenateLite.framework/HyphenateLite -thin armv7 -output HyphenateLite_arm
 lipo HyphenateLite.framework/HyphenateLite -thin arm64 -output HyphenateLite_arm64
 lipo -create HyphenateLite_armv7 HyphenateLite_arm64 -output HyphenateLite
 mv HyphenateLite HyphenateLite.framework/
+ 
  */
 
 #define pixelWH (UIScreen.mainScreen.bounds.size.width * 0.1)
