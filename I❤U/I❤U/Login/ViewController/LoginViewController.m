@@ -11,6 +11,7 @@
 #import "LoginViewModel.h"
 #import "FDAlertView.h"
 #import "ChallangeAlertView.h"
+#import "UIColor+Extension.h"
 
 @interface LoginViewController ()
 
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
+@property (weak, nonatomic) IBOutlet UIImageView *loginIconImageView;
 @property (nonatomic, strong) FDAlertView *challangeAlertView;
 
 @end
@@ -44,6 +46,23 @@
     self.loginButton.layer.masksToBounds = YES;
     UITapGestureRecognizer * tapSelf = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onSelfTap:)];
     [self.view addGestureRecognizer:tapSelf];
+#ifdef WIFE_VERSION
+    self.loginIconImageView.image = [UIImage imageNamed:@"AppIcon"];
+    [self.registerButton setTitleColor:[UIColor ARGB:0x93D3DE] forState:UIControlStateNormal];
+    [self.loginButton setBackgroundColor:[UIColor ARGB:0xBDE8F7]];
+    [self.loginButton setTitleColor:[UIColor ARGB:0x424242] forState:UIControlStateNormal];
+    
+    self.loginIconImageView.layer.cornerRadius = 0;
+    self.loginIconImageView.layer.masksToBounds = NO;
+#else
+    self.loginIconImageView.image = [UIImage imageNamed:@"loginIcon-Plane"];
+    [self.registerButton setTitleColor:[UIColor ARGB:0x90646F] forState:UIControlStateNormal];
+    [self.loginButton setBackgroundColor:[UIColor ARGB:0xAD5144]];
+    [self.loginButton setTitleColor:[UIColor ARGB:0xEBEBEB] forState:UIControlStateNormal];
+    
+    self.loginIconImageView.layer.cornerRadius = 60;
+    self.loginIconImageView.layer.masksToBounds = YES;
+#endif
 }
 - (void)onSelfTap:(UITapGestureRecognizer *)tap{
     [self.accountTextField resignFirstResponder];

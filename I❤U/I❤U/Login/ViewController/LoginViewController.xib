@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="accountTextField" destination="psc-91-mqI" id="L3v-GJ-Ira"/>
                 <outlet property="loginButton" destination="qP1-9y-FAC" id="g3C-Df-BUa"/>
+                <outlet property="loginIconImageView" destination="Ea3-AE-My1" id="IbB-bO-Rim"/>
                 <outlet property="passwordTextField" destination="yxT-pZ-Eu8" id="98j-sf-qtv"/>
                 <outlet property="registerButton" destination="SMR-iG-2Jq" id="tQd-sb-c2n"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
