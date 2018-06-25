@@ -35,11 +35,11 @@
                     <rect key="frame" x="0.0" y="300" width="375" height="367"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMR-iG-2Jq">
-                            <rect key="frame" x="238" y="120" width="77" height="30"/>
+                            <rect key="frame" x="211" y="120" width="104" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="r5u-zD-Pem"/>
                             </constraints>
-                            <state key="normal" title="注册新用户">
+                            <state key="normal" title="没有账号?注册!">
                                 <color key="titleColor" red="0.57647058823529407" green="0.82745098039215681" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>

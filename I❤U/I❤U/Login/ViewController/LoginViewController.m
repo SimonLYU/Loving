@@ -83,7 +83,7 @@
             [self.loginButton setTitle:@"注册" forState:UIControlStateNormal];
         }else{
             self.passwordTextField.secureTextEntry = YES;
-            [self.registerButton setTitle:@"注册新用户" forState:UIControlStateNormal];
+            [self.registerButton setTitle:@"没有账号?注册!" forState:UIControlStateNormal];
             [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
         }
     }];

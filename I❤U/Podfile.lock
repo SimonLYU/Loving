@@ -9,28 +9,27 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
-  - pop (from `https://github.com/facebook/pop.git`)
+  - pop
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - pop
+
 EXTERNAL SOURCES:
-  pop:
-    :git: https://github.com/facebook/pop.git
   ReactiveCocoa:
     :git: https://github.com/zhao0/ReactiveCocoa.git
     :tag: 2.5.2
 
 CHECKOUT OPTIONS:
-  pop:
-    :commit: 88211ac965f887738c275b25aaea5bbc3a2d0a4b
-    :git: https://github.com/facebook/pop.git
   ReactiveCocoa:
     :git: https://github.com/zhao0/ReactiveCocoa.git
     :tag: 2.5.2
 
 SPEC CHECKSUMS:
-  pop: 40b9f1875c80f6e613958a4a44bf98b1576389f1
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
 
-PODFILE CHECKSUM: c356563d07f9365ea812a937d5253903505db9d9
+PODFILE CHECKSUM: bbbde2c973bad79d108883e621ce39febc25d344
 
 COCOAPODS: 1.5.3

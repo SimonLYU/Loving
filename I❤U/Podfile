@@ -9,7 +9,8 @@ targetsArray = ['老婆专属的App', '打飞机']
 targetsArray.each do |t|
     target t do
         pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
-        pod 'pop', :git => 'https://github.com/facebook/pop.git'
+#        pod 'pop', :git => 'https://github.com/facebook/pop.git'
+        pod 'pop'
     end
 end
 
