@@ -74,6 +74,8 @@
             return @"答题错误.m4r";
         case kGameRoomUIAudioTypeAnswerRight:
             return @"答题正确.m4r";
+        case kGameRoomUIAudioTypeGameOver:
+            return @"resurrection_full.m4r";
         default:
             return nil;
     }

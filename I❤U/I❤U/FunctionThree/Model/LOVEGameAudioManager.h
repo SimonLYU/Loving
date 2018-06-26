@@ -20,7 +20,9 @@ typedef NS_ENUM(NSUInteger, EnGameUIAudioType)
     kGameRoomUIAudioTypeReciprocal_3s,            // 答题3s倒计时
     kGameRoomUIAudioTypeTimeUp,                   // 答题时间结束
     kGameRoomUIAudioTypeAnswerWrong,              // 答题错误
-    kGameRoomUIAudioTypeAnswerRight               // 答题正确
+    kGameRoomUIAudioTypeAnswerRight,              // 答题正确
+    
+    kGameRoomUIAudioTypeGameOver                  // 游戏分出胜负
 };
 
 @interface LOVEGameAudioManager : NSObject

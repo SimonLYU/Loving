@@ -68,6 +68,7 @@
             self.targetIsReady = NO;
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [[IMManager shareManager] genLocalGameMessage:[NSString stringWithFormat:@"%@ 赢了",[[IMManager shareManager] nickForAccount:[LOVEModel shareModel].fromAccount]]];
+                [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypeGameOver];
             });
         }
     }];
@@ -83,6 +84,7 @@
             
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [[IMManager shareManager] genLocalGameMessage:[NSString stringWithFormat:@"%@ 赢了",[[IMManager shareManager] nickForAccount:[LOVEModel shareModel].toAccount]]];
+                [LOVEGameAudioManager playUIAudio:kGameRoomUIAudioTypeGameOver];
             });
         }
     }];
