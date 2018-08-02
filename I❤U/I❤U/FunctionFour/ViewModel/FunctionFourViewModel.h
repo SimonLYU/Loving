@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy) NSString *targetAccount;
 @property (nonatomic, strong) RACCommand *creatConversationCommand;
+@property (nonatomic, strong) RACCommand *testCommand;
 
 @end

@@ -35,6 +35,18 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self resetAnimationView];
+    //ceshi...
+    [self.viewModel.testCommand.executionSignals.flatten subscribeNext:^(id x) {
+        
+    }];
+}
+
+- (void)updateUI:(id)data data2:(id)data2{
+    NSLog(@"data1 = %@, data2 = %@",data,data2);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.viewModel.testCommand execute:nil];
 }
 
 - (void)setupUI{

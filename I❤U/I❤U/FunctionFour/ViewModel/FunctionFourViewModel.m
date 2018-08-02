@@ -46,4 +46,20 @@
     return _creatConversationCommand;
 }
 
+- (RACCommand *)testCommand{
+    if (!_testCommand) {
+        _testCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                NSLog(@"-- creat signal");
+                [subscriber sendNext:nil];
+                [subscriber sendCompleted];
+                return [RACDisposable disposableWithBlock:^{
+                    NSLog(@"-- signal dispose");
+                }];
+            }];
+        }];
+    }
+    return _testCommand;
+}
+
 @end

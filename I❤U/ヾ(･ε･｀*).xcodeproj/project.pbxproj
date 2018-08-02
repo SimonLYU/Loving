@@ -2447,7 +2447,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -3244,10 +3244,9 @@
 			baseConfigurationReference = 24339D25D2403E9506F0430A /* Pods-老婆专属的App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KS98J4RYQ2;
+				DEVELOPMENT_TEAM = H72ELBS265;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
@@ -3267,7 +3266,7 @@
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yiyou.I-U";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyu.wifeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3279,10 +3278,9 @@
 			baseConfigurationReference = 1707682467340E08267591C7 /* Pods-老婆专属的App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "ヾ(･ε･｀*).entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KS98J4RYQ2;
+				DEVELOPMENT_TEAM = H72ELBS265;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
@@ -3302,7 +3300,7 @@
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/I❤U/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yiyou.I-U";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyu.wifeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
