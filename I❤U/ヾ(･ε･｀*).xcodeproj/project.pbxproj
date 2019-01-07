@@ -168,7 +168,6 @@
 		F45BD8EE2073610800100E37 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8E22073610700100E37 /* MASConstraint.m */; };
 		F45BD8EF2073610800100E37 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8E42073610700100E37 /* MASViewConstraint.m */; };
 		F45BD8F02073610800100E37 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8E52073610700100E37 /* MASViewAttribute.m */; };
-		F45BD8F12073610800100E37 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45BD8E62073610700100E37 /* Info.plist */; };
 		F45BD980207361F900100E37 /* LOTRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8F4207361F900100E37 /* LOTRenderNode.m */; };
 		F45BD981207361F900100E37 /* LOTTrimPathNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8F9207361F900100E37 /* LOTTrimPathNode.m */; };
 		F45BD982207361F900100E37 /* LOTColorInterpolator.m in Sources */ = {isa = PBXBuildFile; fileRef = F45BD8FB207361F900100E37 /* LOTColorInterpolator.m */; };
@@ -2508,7 +2507,6 @@
 				F4D701BF20CA201500172456 /* LOVEMessageCell.xib in Resources */,
 				F440D2E020C94087002EFB87 /* EaseUIResource.bundle in Resources */,
 				F4C0A99020D275BE00E86A65 /* SSKeychain.strings in Resources */,
-				F45BD8F12073610800100E37 /* Info.plist in Resources */,
 				F440D28620C94086002EFB87 /* MJRefresh.bundle in Resources */,
 				F440CE3F20C909B0002EFB87 /* FunctionOneHomeViewController.xib in Resources */,
 				F440CE2720C9094F002EFB87 /* FunctionFourHomeViewController.xib in Resources */,
@@ -3246,7 +3244,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H72ELBS265;
+				DEVELOPMENT_TEAM = 6GT95KREUB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
@@ -3280,7 +3278,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H72ELBS265;
+				DEVELOPMENT_TEAM = 6GT95KREUB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/I❤U/3rd/HyphenateSDK",
